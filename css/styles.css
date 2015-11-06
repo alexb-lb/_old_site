@@ -101,7 +101,7 @@ body {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
-  max-width: 600px;
+  max-width: 100%;
   margin-bottom: 20px;
   margin-top: 20px; }
   @media (min-width: 760px) {
@@ -265,7 +265,8 @@ body {
     text-align: center; } }
 /************ MAIN **********/
 .main {
-  background-color: #dad8d4; }
+  background-color: #dad8d4;
+  overflow: hidden; }
 
 .anchor-wrapper {
   position: relative; }
@@ -647,6 +648,9 @@ body {
     color: #ffffff; }
 
 /******** RESUME block *******/
+.resume {
+  margin-bottom: 30px; }
+
 .resume-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -870,7 +874,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  margin: 30px 0; }
+  margin-top: 20px; }
 
 /*********** CONTACTS block *************/
 .contacts-wrapper {
@@ -934,24 +938,21 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 80px 0; }
-  @media (min-width: 760px) {
-    .mail-form {
-      max-width: 400px;
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 0 250px;
-      -ms-flex: 1 0 250px;
-      flex: 1 0 250px; } }
+  padding: 80px 0;
+  width: 100%;
+  max-width: 450px; }
 
 .mail-text, .mail-message {
-  width: 100%;
+  max-width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ffffff;
@@ -964,19 +965,6 @@ body {
 .mail-message {
   resize: none;
   min-height: 100px; }
-
-.contacts__info-block {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 400px;
-  padding: 0 10px; }
-  @media (min-width: 760px) {
-    .contacts__info-block {
-      width: auto;
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 0 250px;
-      -ms-flex: 1 0 250px;
-      flex: 1 0 250px; } }
 
 /*****Contacts info block******/
 .contacts__info-block {
