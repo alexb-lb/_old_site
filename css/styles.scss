@@ -14,6 +14,7 @@ $color-4: #dd3c26;
 $color-5: #dad8d4;
 $color-6: #b6b5b2;
 $color-7: #f0f0f0;
+$color-link: #0d00b8;
 
 /*media queries*/
 $media-sm: 400px;
@@ -335,6 +336,12 @@ $article-font-size-m: 45px;
   * {
     color: $color-2;
     text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: $color-link;
   }
 }
 
@@ -706,7 +713,7 @@ $article-font-size-m: 45px;
 
   a {
     text-decoration: none;
-    color: #0d00b8;
+    color: $color-link;
   }
 
   .fa {
