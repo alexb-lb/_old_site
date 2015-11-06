@@ -26,6 +26,11 @@ dd, dt {
   margin: 0;
 }
 
+p{
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -111,7 +116,11 @@ body {
 
   .name__definition {
     padding: 10px;
-    color: #fff;
+
+    * {
+      font-weight: normal;
+      color: $color-base;
+    }
   }
 }
 
@@ -256,7 +265,7 @@ body {
 /****** MAIN HEADERS BASE STYLES ******/
 $article-font-size-xs: 30px;
 $article-font-size-sm: 40px;
-$article-font-size-m: 50px;
+$article-font-size-m: 45px;
 
 .article-header__wrapper {
   max-width: 100%;
@@ -270,7 +279,7 @@ $article-font-size-m: 50px;
 }
 
 .article-h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: $article-font-size-xs;
   color: $color-4;
   text-transform: uppercase;
@@ -317,8 +326,11 @@ $article-font-size-m: 50px;
 
 .article-header__description {
   max-width: 100%;
-  color: $color-2;
-  text-align: center;
+
+  * {
+    color: $color-2;
+    text-align: center;
+  }
 }
 
 /********* PROFILE block **********/
@@ -910,6 +922,11 @@ $article-font-size-m: 50px;
 
   @media (min-width: $media-m) {
     justify-content: center;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
   }
 
   .fa {

@@ -7,6 +7,10 @@
 dd, dt {
   margin: 0; }
 
+p {
+  margin: 0;
+  padding: 0; }
+
 ul {
   padding: 0;
   margin: 0; }
@@ -74,8 +78,10 @@ body {
     color: #fff;
     text-transform: uppercase; }
   .top-name__block .name__definition {
-    padding: 10px;
-    color: #fff; }
+    padding: 10px; }
+    .top-name__block .name__definition * {
+      font-weight: normal;
+      color: #ffffff; }
 
 /********* TOP NAVIGATION **********/
 .top-nav__wrapper {
@@ -195,7 +201,7 @@ body {
     padding: 60px 10px 20px 10px; }
 
 .article-h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 30px;
   color: #dd3c26;
   text-transform: uppercase;
@@ -205,7 +211,7 @@ body {
       font-size: 40px; } }
   @media (min-width: 760px) {
     .article-h2 {
-      font-size: 50px; } }
+      font-size: 45px; } }
   .article-h2:before {
     content: '<';
     font-size: 30px;
@@ -216,7 +222,7 @@ body {
         font-size: 40px; } }
     @media (min-width: 760px) {
       .article-h2:before {
-        font-size: 50px; } }
+        font-size: 45px; } }
   .article-h2:after {
     content: '/>';
     font-size: 30px;
@@ -227,12 +233,13 @@ body {
         font-size: 40px; } }
     @media (min-width: 760px) {
       .article-h2:after {
-        font-size: 50px; } }
+        font-size: 45px; } }
 
 .article-header__description {
-  max-width: 100%;
-  color: #5b5a5a;
-  text-align: center; }
+  max-width: 100%; }
+  .article-header__description * {
+    color: #5b5a5a;
+    text-align: center; }
 
 /********* PROFILE block **********/
 .profile {
@@ -677,6 +684,9 @@ body {
   @media (min-width: 760px) {
     .main-footer {
       justify-content: center; } }
+  .main-footer a {
+    text-decoration: none;
+    color: inherit; }
   .main-footer .fa {
     font-size: 25px;
     color: #b6b5b2;
