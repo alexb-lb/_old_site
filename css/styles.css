@@ -609,7 +609,8 @@ body {
   .gallery-item__desc .gallery-item__desc-text {
     font-size: 14px;
     text-align: center;
-    color: #3d3c3c; }
+    color: #3d3c3c;
+    max-width: 100%; }
 
 /*hover-¤ЇЇхъЄ√ яЁш эртхфхэшш эр сыюъ*/
 .gallery-item:hover .gallery-item__img {

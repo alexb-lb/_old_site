@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc53b064-294b-428f-8067-858484dcafc6" name="Default" comment="added vendor prefixes in scss">
+    <list default="true" id="dc53b064-294b-428f-8067-858484dcafc6" name="Default" comment="added max-width 100% to .gallery-item__desc-text for IE 10&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts.html" afterPath="$PROJECT_DIR$/contacts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css.map" afterPath="$PROJECT_DIR$/css/styles.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.scss" afterPath="$PROJECT_DIR$/css/styles.scss" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19955157">
-              <caret line="1344" column="17" selection-start-line="1344" selection-start-column="17" selection-end-line="1344" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.44955158">
+              <caret line="765" column="0" selection-start-line="765" selection-start-column="0" selection-end-line="765" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,7 +40,7 @@
       <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portfolio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6923077">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
               <folding />
             </state>
@@ -61,9 +62,9 @@
       <list>
         <option value="$PROJECT_DIR$/blog.html" />
         <option value="$PROJECT_DIR$/resume.html" />
-        <option value="$PROJECT_DIR$/contacts.html" />
         <option value="$PROJECT_DIR$/portfolio.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/contacts.html" />
         <option value="$PROJECT_DIR$/css/styles.scss" />
       </list>
     </option>
@@ -243,7 +244,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446836435384</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added vendor prefixes in scss">
+      <created>1446842071311</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1446842071311</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -290,7 +297,8 @@
     <MESSAGE value="added google map to conta" />
     <MESSAGE value="added description in portfolio page" />
     <MESSAGE value="added vendor prefixes in scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="added vendor prefixes in scss" />
+    <MESSAGE value="added max-width 100% to .gallery-item__desc-text for IE 10&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added max-width 100% to .gallery-item__desc-text for IE 10&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -361,16 +369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contacts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68609864">
-          <caret line="89" column="429" selection-start-line="89" selection-start-column="429" selection-end-line="89" selection-end-column="429" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.019058296">
@@ -387,9 +385,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40919283">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6923077">
+        <state vertical-scroll-proportion="-0.65384614">
           <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
           <folding />
         </state>
@@ -397,8 +405,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19955157">
-          <caret line="1344" column="17" selection-start-line="1344" selection-start-column="17" selection-end-line="1344" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.44955158">
+          <caret line="765" column="0" selection-start-line="765" selection-start-column="0" selection-end-line="765" selection-end-column="0" />
           <folding />
         </state>
       </provider>
