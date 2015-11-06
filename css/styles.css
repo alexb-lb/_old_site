@@ -252,7 +252,7 @@ body {
 .profile-block__wrapper {
   margin-top: 40px;
   padding-bottom: 50px;
-  min-height: 500px;
+  min-height: 510px;
   background: url("../images/map_pattern.png") 0 50px repeat-x;
   background-color: #dd3c26; }
   .profile-block__wrapper .profile-tabs__bg {
@@ -309,6 +309,8 @@ body {
     @media (min-width: 760px) {
       .profile-tabs .tab {
         padding-top: 20px; } }
+    .profile-tabs .tab * {
+      text-indent: 20px; }
 
 /*swag*/
 .swag {
