@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc53b064-294b-428f-8067-858484dcafc6" name="Default" comment="">
+    <list default="true" id="dc53b064-294b-428f-8067-858484dcafc6" name="Default" comment="added google map to conta">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacts.html" afterPath="$PROJECT_DIR$/contacts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resume.html" afterPath="$PROJECT_DIR$/resume.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css.map" afterPath="$PROJECT_DIR$/css/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.scss" afterPath="$PROJECT_DIR$/css/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio.html" afterPath="$PROJECT_DIR$/portfolio.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="My_portfolio.iws" />
@@ -28,32 +26,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58864427">
-              <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+            <state vertical-scroll-proportion="-8.884615">
+              <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contacts.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="portfolio.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/portfolio.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.730769">
+              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contacts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contacts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.8846154">
-              <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resume.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resume.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.576923">
-              <caret line="262" column="44" selection-start-line="262" selection-start-column="44" selection-end-line="262" selection-end-column="44" />
-              <folding />
+            <state vertical-scroll-proportion="0.67600894">
+              <caret line="89" column="429" selection-start-line="89" selection-start-column="429" selection-end-line="89" selection-end-column="429" />
+              <folding>
+                <element signature="n#style#0;n#iframe#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,12 +71,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/blog.html" />
-        <option value="$PROJECT_DIR$/portfolio.html" />
-        <option value="$PROJECT_DIR$/contacts.html" />
         <option value="$PROJECT_DIR$/resume.html" />
         <option value="$PROJECT_DIR$/css/styles.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/portfolio.html" />
+        <option value="$PROJECT_DIR$/contacts.html" />
       </list>
     </option>
   </component>
@@ -213,7 +213,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446825163675</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added button to resume page, some changes in btn style">
+      <created>1446826243173</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1446826243173</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -256,7 +262,8 @@
     <MESSAGE value="first tab and header on main page finished" />
     <MESSAGE value="added non-different headers and footers to all pages" />
     <MESSAGE value="added content to contacts and resume pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added content to contacts and resume pages" />
+    <MESSAGE value="added button to resume page, some changes in btn style" />
+    <option name="LAST_COMMIT_MESSAGE" value="added button to resume page, some changes in btn style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -319,34 +326,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="19" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923">
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.34304932">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contacts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8846154">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -359,11 +342,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7141256">
+          <caret line="89" column="268" selection-start-line="89" selection-start-column="268" selection-end-line="89" selection-end-column="268" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58864427">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
+        <state vertical-scroll-proportion="-8.884615">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.730769">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contacts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67600894">
+          <caret line="89" column="429" selection-start-line="89" selection-start-column="429" selection-end-line="89" selection-end-column="429" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
