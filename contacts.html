@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic' rel='stylesheet'
+        type='text/css'>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <title>Alex Bobrenko`s portfolio</title>
+</head>
+<body>
+<header class="main-header">
+
+  <article class="top-name__block">
+    <h1 class="name">Александр Бобренко</h1>
+    <section class="name__definition">Ультра-мега веб девелопер Ультра-мега веб девелопер Ультра-мега веб девелопер
+      Ультра-мега веб девелопер
+    </section>
+  </article>
+
+  <nav class="top-nav__wrapper">
+    <button class="top-nav__button fa fa-bars" id="navbar__toggle-button"></button>
+
+    <ul class="top-nav max-width-limited">
+      <li><a href="http://localhost:63342/My_portfolio/index.html#article-anchor"><span
+              class="fa fa-user ico"></span><span class="ico__definition">Обо мне</span></a></li>
+      <li><a href="#"><span class="fa fa-suitcase ico"></span><span class="ico__definition">Услуги</span></a></li>
+      <li><a href="http://localhost:63342/My_portfolio/portfolio.html#article-anchor">
+        <span class="fa fa-picture-o ico"></span><span class="ico__definition">Портфолио</span></a>
+      </li>
+      <li><a href="http://localhost:63342/My_portfolio/resume.html#article-anchor"><span
+              class="fa fa-list ico"></span><span class="ico__definition">Резюме</span></a></li>
+      <li class="active-li"><a href="http://localhost:63342/My_portfolio/contacts.html#article-anchor"><span class="fa fa-envelope ico"></span><span class="ico__definition">Контакты</span></a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<main class="main">
+  <div class="anchor-wrapper">
+    <div class="anchor" id="article-anchor"></div>
+  </div>
+
+  <article class="contacts">
+    <header class="article-header__wrapper">
+      <div class="article-header max-width-limited">
+        <h2 class="article-h2">Контакты</h2>
+
+        <p class="article-header__description">Ультра-мега веб девелопер Ультра-мега веб девелопер Ультра-мега веб
+          девелопер Ультра-мега веб девелопер Ультра-мега в</p>
+      </div>
+    </header>
+
+    <section class="contacts-wrapper margin-top">
+      <section class="contacts__mail-block">
+        <form class="mail-form" method="post">
+          <input class="mail-text" type="text" name="name" spellcheck="false" placeholder="Ваше имя / компания" required>
+          <input class="mail-text" type="email" name="email" spellcheck="false" placeholder="Ваш e-mail" required>
+          <textarea class="mail-message"  name="message" spellcheck="false" placeholder="Сообщение" required></textarea>
+          <input class="mail-btn" type="submit" value="Отправить">
+        </form>
+      </section>
+
+      <section class="contacts__info-block">
+        <div class="info-block_item">
+          <div class="contacts-ico"><i class="fa fa-envelope"></i></div>
+          <div class="contacts-text">oknerbob@gmail.com</div>
+        </div>
+
+        <div class="info-block_item">
+          <div class="contacts-ico"><i class="fa fa-map-marker"></i></div>
+          <div class="contacts-text">Украина, Киев, Оболонский р-н</div>
+        </div>
+
+        <div class="info-block_item">
+          <div class="contacts-ico"><i class="fa fa-phone"></i></div>
+          <div class="contacts-text">+38 (093) 746-40-78</div>
+        </div>
+
+        <div class="info-block_item">
+          <div class="contacts-ico"><i class="fa fa-skype"></i></div>
+          <div class="contacts-text">en1ight</div>
+        </div>
+      </section>
+    </section>
+
+  </article>
+</main>
+
+<footer class="main-footer">
+  <i class="fa fa-vk"></i>
+  <i class="fa fa-facebook"></i>
+  <i class="fa fa-google-plus"></i>
+  <i class="fa fa-skype"></i>
+  <i class="fa fa-envelope"></i>
+</footer>
+<script src="js/js.js"></script>
+</body>
+</html>
