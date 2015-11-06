@@ -43,6 +43,23 @@ body {
 .margin-top {
   margin-top: 40px; }
 
+.btn {
+  padding: 7px 30px;
+  border: 3px solid #ffffff;
+  background-color: #dd3c26;
+  outline: none;
+  font-size: 20px;
+  text-shadow: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none; }
+  .btn:hover {
+    background-color: #ffffff;
+    color: #dd3c26;
+    transition: all 0.3s; }
+
 /******** HEADER ********/
 .main-header {
   position: relative;
@@ -563,6 +580,12 @@ body {
     left: -7px;
     top: 12px; }
 
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0; }
+
 /*********** CONTACTS block *************/
 .contacts-wrapper {
   display: flex;
@@ -623,20 +646,6 @@ body {
     .contacts__info-block {
       width: auto;
       flex: 1 0 250px; } }
-
-.mail-btn {
-  padding: 7px 30px;
-  border: 3px solid #ffffff;
-  background-color: #dd3c26;
-  outline: none;
-  font-size: 20px;
-  text-shadow: none;
-  font-weight: bold;
-  text-transform: uppercase; }
-  .mail-btn:hover {
-    background-color: #ffffff;
-    color: #dd3c26;
-    transition: all 0.5s; }
 
 /*****Contacts info block******/
 .contacts__info-block {
