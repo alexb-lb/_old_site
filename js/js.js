@@ -1,5 +1,4 @@
 'use strict';
-var dno = 1;
 
 /*CLOSE/OPEN script for top nav*/
 /*vars*/
