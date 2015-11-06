@@ -239,7 +239,8 @@ body {
   margin-bottom: 10px; }
 
 .article-header__description {
-  max-width: 100%; }
+  max-width: 100%;
+  color: #5b5a5a; }
   .article-header__description * {
     color: #5b5a5a;
     text-align: center; }
