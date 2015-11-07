@@ -147,7 +147,8 @@ function changeHref(){
     var loc = location.href;
     var newHrefEnds = loc.indexOf("#");
     var newHref = loc.slice(0, newHrefEnds);
-    history.pushState(null, null, newHref);
+    setTimeout(function(){
+        history.pushState(null, null, newHref);
+    }, 0);
 }
-
 
