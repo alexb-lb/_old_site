@@ -145,10 +145,13 @@ window.addEventListener('DOMContentLoaded', changeHref);
 
 function changeHref(){
     var loc = location.href;
-    var newHrefEnds = loc.indexOf("#");
-    var newHref = loc.slice(0, newHrefEnds);
-    setTimeout(function(){
-        history.pushState(null, null, newHref);
-    }, 0);
+
+    if(loc.indexOf("#") !== -1) {
+        var newHrefEnds = loc.indexOf("#");
+        var newHref = loc.slice(0, newHrefEnds);
+        setTimeout(function () {
+            history.pushState(null, null, newHref);
+        }, 0);
+    }
 }
 
