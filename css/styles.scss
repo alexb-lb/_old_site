@@ -611,6 +611,24 @@ $article-font-size-m: 45px;
   background: url("../images/rails_bg.jpg") fixed center bottom;
 }
 
+.swag-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+  font-weight: bold;
+  color: $color-base;
+  text-shadow: 2px 2px $color-3;
+  text-align: center;
+
+  p, div, section, span{
+    max-width: 100%;
+  }
+}
+
 
 
 /******** PORTFOLIO-GALLERY block **********/
