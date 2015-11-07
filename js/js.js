@@ -137,5 +137,19 @@ function gallery() {
             galleryContainers[i].style.height = itemHeight + 'px';
         }
     }
-
 }
+
+
+/*change url*/
+
+//window.addEventListener('DOMContentLoaded', changeUrl);
+changeUrl();
+
+function changeUrl(){
+    var loc = location.href;
+    var newHrefEnds = loc.indexOf("#");
+    var newHref = loc.slice(0, newHrefEnds);
+    history.pushState(null, null, newHref);
+}
+
+
