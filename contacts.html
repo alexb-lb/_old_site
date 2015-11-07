@@ -54,10 +54,10 @@
 
     <section class="contacts-wrapper margin-top">
       <section class="contacts__mail-block">
-        <form class="mail-form" method="post">
+        <form class="mail-form" action="//formspree.io/your@email.com" method="POST">
           <input class="mail-text" type="text" name="name" spellcheck="false" placeholder="Ваше имя / компания" required>
-          <input class="mail-text" type="email" name="email" spellcheck="false" placeholder="Ваш e-mail" required>
-          <textarea class="mail-message"  name="message" spellcheck="false" placeholder="Сообщение" required></textarea>
+          <input class="mail-text" type="email" name="_replyto" spellcheck="false" placeholder="Ваш e-mail" required>
+          <textarea class="mail-message"  name="body" spellcheck="false" placeholder="Сообщение" required></textarea>
           <div class="button-wrapper"><input class="btn" type="submit" value="Отправить"></div>
         </form>
       </section>
