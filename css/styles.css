@@ -955,12 +955,11 @@ body {
   max-width: 100%;
   padding: 10px;
   margin-bottom: 20px;
+  color: #3d3c3c;
+  outline: none;
   border: 1px solid #ffffff;
   border-radius: 7px;
   background-color: #ffffff; }
-  .mail-text:focus, .mail-message:focus {
-    color: #3d3c3c;
-    outline: none; }
 
 .mail-message {
   resize: none;
