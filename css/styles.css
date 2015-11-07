@@ -9,6 +9,7 @@ dd, dt {
 
 p {
   margin: 0;
+  margin-bottom: 5px;
   padding: 0; }
 
 ul {
@@ -23,7 +24,14 @@ button {
   border: 0; }
 
 a {
-  outline: none; }
+  text-decoration: none;
+  outline: none;
+  color: #0d00b8;
+  transition: all 0.2s; }
+  a:hover {
+    text-decoration: none;
+    transition: all 0.2s;
+    color: #dd3c26; }
 
 figure {
   padding: 0;
@@ -339,13 +347,11 @@ body {
 .article-header__description {
   max-width: 100%;
   color: #5b5a5a; }
-  .article-header__description * {
+  .article-header__description p, .article-header__description span, .article-header__description div, .article-header__description section {
     color: #5b5a5a;
     text-align: center; }
   .article-header__description a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #0d00b8; }
+    font-weight: bold; }
 
 /********* PROFILE block **********/
 .profile {
@@ -451,6 +457,15 @@ body {
         padding-top: 20px; } }
     .profile-tabs .tab * {
       text-indent: 20px; }
+    .profile-tabs .tab a {
+      color: #dad8d4;
+      font-weight: bold;
+      text-decoration: underline;
+      transition: all 0.2s; }
+      .profile-tabs .tab a:hover {
+        text-decoration: none;
+        transition: all 0.2s;
+        color: #0d00b8; }
 
 /*swag*/
 .swag {
@@ -807,9 +822,6 @@ body {
 .desc-text {
   font-size: 14px;
   color: #3d3c3c; }
-  .desc-text a {
-    text-decoration: none;
-    color: #0d00b8; }
   .desc-text .fa {
     padding-right: 10px;
     color: #dd3c26; }

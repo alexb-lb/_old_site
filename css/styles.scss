@@ -29,6 +29,7 @@ dd, dt {
 
 p{
   margin: 0;
+  margin-bottom: 5px;
   padding: 0;
 }
 
@@ -47,7 +48,16 @@ button {
 }
 
 a{
+  text-decoration: none;
   outline: none;
+  color: $color-link;
+  transition: all 0.2s;
+
+  &:hover{
+    text-decoration: none;
+    transition: all 0.2s;
+    color: $color-4;
+  }
 }
 
 figure{
@@ -435,17 +445,16 @@ $article-font-size-m: 45px;
   max-width: 100%;
   color: $color-2;
 
-  * {
+  & p, & span, & div, & section{
     color: $color-2;
     text-align: center;
   }
 
   a {
-    text-decoration: none;
     font-weight: bold;
-    color: $color-link;
   }
 }
+
 
 
 
@@ -577,8 +586,21 @@ $article-font-size-m: 45px;
       padding-top: 20px;
     }
 
-    *{
+    * {
       text-indent: 20px;
+    }
+
+    a{
+      color: $color-5;
+      font-weight: bold;
+      text-decoration: underline;
+      transition: all 0.2s;
+
+      &:hover{
+        text-decoration: none;
+        transition: all 0.2s;
+        color: $color-link;
+      }
     }
   }
 }
@@ -1032,8 +1054,9 @@ $article-font-size-m: 45px;
   color: $color-3;
 
   a {
-    text-decoration: none;
-    color: $color-link;
+
+    //text-decoration: none;
+    //color: $color-link;
   }
 
   .fa {
