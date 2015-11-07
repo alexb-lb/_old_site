@@ -1204,14 +1204,11 @@ $article-font-size-m: 45px;
   max-width: 100%;
   padding: 10px;
   margin-bottom: 20px;
+  color: $color-3;
+  outline: none;
   border: 1px solid $color-base;
   border-radius: 7px;
   background-color: $color-base;
-
-  &:focus{
-    color: $color-3;
-    outline: none;
-  }
 }
 
 .mail-message{
