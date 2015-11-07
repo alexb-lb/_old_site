@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function gallery() {
-   /*Класс родителя(!) тега со спрайтом внутри*/
+    /*Класс родителя(!) тега со спрайтом внутри*/
     var galleryContainers = document.querySelectorAll('.gallery-item__hover-block');
 
     /*Класс обертки, в которых спрайт фоном*/
@@ -143,14 +143,14 @@ function gallery() {
 /*change href, to delete anchor links*/
 window.addEventListener('DOMContentLoaded', changeHref);
 
-function changeHref(){
+function changeHref() {
     var loc = location.href;
 
-    if(loc.indexOf("#") !== -1) {
+    if (loc.indexOf("#") !== -1) {
         var newHrefEnds = loc.indexOf("#");
         var newHref = loc.slice(0, newHrefEnds);
         setTimeout(function () {
-            history.pushState(null, null, newHref);
+            history.replaceState(null, null, newHref);
         }, 0);
     }
 }

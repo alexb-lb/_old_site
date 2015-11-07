@@ -37,8 +37,8 @@
       <file leaf-file-name="js.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/js.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7222222">
-              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9074074">
+              <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -358,7 +358,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446921853422</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added chek to js changeHref script">
+      <created>1446922385586</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1446922385586</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -415,7 +421,8 @@
     <MESSAGE value="changed all paths to css/js files,changed links to new folders" />
     <MESSAGE value="changed code in js, to delete links in href" />
     <MESSAGE value="changed js trying to work anchor" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed js trying to work anchor" />
+    <MESSAGE value="added chek to js changeHref script" />
+    <option name="LAST_COMMIT_MESSAGE" value="added chek to js changeHref script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -544,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/js.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7222222">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9074074">
+          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
           <folding />
         </state>
       </provider>
