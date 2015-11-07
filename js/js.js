@@ -140,12 +140,10 @@ function gallery() {
 }
 
 
-/*change url*/
+/*change href, to delete anchor links*/
+window.addEventListener('DOMContentLoaded', changeHref);
 
-//window.addEventListener('DOMContentLoaded', changeUrl);
-changeUrl();
-
-function changeUrl(){
+function changeHref(){
     var loc = location.href;
     var newHrefEnds = loc.indexOf("#");
     var newHref = loc.slice(0, newHrefEnds);
