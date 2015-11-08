@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d5fdafe-7987-4148-af2c-6f7c4f17eaad" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Git\en1ight.github.io\images\bs_prev.psd" afterPath="" />
-      <change type="DELETED" beforePath="D:\Git\en1ight.github.io\images\hecho_prev.psd" afterPath="" />
-      <change type="DELETED" beforePath="D:\Git\en1ight.github.io\images\main_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\Git\en1ight.github.io\images\main_bg_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\Git\en1ight.github.io\images\main_bg_3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\Git\en1ight.github.io\images\main_bg_4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="D:\Git\en1ight.github.io\images\Без имени-1.psd" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/item-4/index.html" afterPath="$PROJECT_DIR$/portfolio/item-4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/item-5/index.html" afterPath="$PROJECT_DIR$/portfolio/item-5/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="en1ight.github.io.iws" />
@@ -42,10 +35,10 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/portfolio/item-4/index.html">
+        <entry file="file://$PROJECT_DIR$/portfolio/item-5/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1179191">
-              <caret line="75" column="100" selection-start-line="75" selection-start-column="100" selection-end-line="75" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.56763005">
+              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -69,6 +62,7 @@
         <option value="$PROJECT_DIR$/contacts/index.html" />
         <option value="$PROJECT_DIR$/blog/index.html" />
         <option value="$PROJECT_DIR$/portfolio/item-4/index.html" />
+        <option value="$PROJECT_DIR$/portfolio/item-5/index.html" />
       </list>
     </option>
   </component>
@@ -185,7 +179,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447018680215</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added masterteh page">
+      <created>1447021431098</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1447021431098</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -228,7 +228,8 @@
     <MESSAGE value="added dan hecho project (3),changed title in portfolio" />
     <MESSAGE value="added test favico in dan hecho page" />
     <MESSAGE value="added favicon to each page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added favicon to each page" />
+    <MESSAGE value="added masterteh page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added masterteh page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -271,14 +272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/item-1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19653179">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -339,6 +332,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/item-1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6682081">
+          <caret line="34" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="108" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/item-4/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82543355">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="24.192308">
@@ -347,10 +356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/item-4/index.html">
+    <entry file="file://$PROJECT_DIR$/portfolio/item-5/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1179191">
-          <caret line="75" column="100" selection-start-line="75" selection-start-column="100" selection-end-line="75" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.56763005">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding />
         </state>
       </provider>
