@@ -8,13 +8,13 @@ dd, dt {
   margin: 0; }
 
 p {
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 5px 0;
   padding: 0; }
 
 ul {
+  margin: 0;
   padding: 0;
-  margin: 0; }
+  margin-left: 20px; }
 
 h1, h2, h3 {
   text-align: center;
@@ -41,7 +41,7 @@ figure {
 body {
   font-family: "Play";
   font-size: 16px;
-  color: #ffffff;
+  color: #3d3c3c;
   min-width: 275px; }
 
 .max-width-limited {
@@ -169,6 +169,7 @@ body {
 
 /*NAVIGATION ON LARGE VIEWPORT*/
 .top-nav {
+  padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -676,6 +677,68 @@ body {
   .gallery-item:hover .gallery-item__desc .gallery-item__desc-text {
     color: #ffffff; }
 
+/******PORTFOLIO ITEM BLOCK*****/
+.project-wrapper {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 760px) {
+    .project-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start; } }
+
+.project-info, .project-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px 10px; }
+  @media (min-width: 760px) {
+    .project-info, .project-img {
+      box-sizing: border-box;
+      max-width: 400px; } }
+  .project-info > header, .project-img > header {
+    background: url("../images/title_line_bg.jpg") repeat-x 0 50%;
+    margin-bottom: 30px; }
+
+.project__infoblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px; }
+  .project__infoblock header {
+    margin-left: 7%;
+    margin-bottom: 7px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #dd3c26; }
+    @media (min-width: 400px) {
+      .project__infoblock header {
+        margin-left: 15%;
+        padding: 5px 20px; } }
+  .project__infoblock .infoblock__text {
+    background-color: #f0f0f0;
+    margin-right: 7%;
+    padding: 5px 10px; }
+    @media (min-width: 400px) {
+      .project__infoblock .infoblock__text {
+        margin-right: 15%;
+        padding: 5px 20px; } }
+  .project__infoblock a {
+    font-weight: bold; }
+
+@media (min-width: 760px) {
+  .project-img {
+    max-width: 600px; } }
+
+.project-img__container {
+  background-color: #f0f0f0; }
+  .project-img__container img {
+    width: 100%; }
+
 /******** RESUME block *******/
 .resume {
   margin-bottom: 30px; }
@@ -735,7 +798,7 @@ body {
   .resume-item > header {
     background: url("../images/title_line_bg.jpg") repeat-x 0 50%; }
 
-.resume-item__header {
+.resume-item__header, .project-info > header h3, .project-img > header h3 {
   display: inline-block;
   font-size: 26px;
   font-weight: bold;
