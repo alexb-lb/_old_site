@@ -61,7 +61,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  color: inherit;
+  color: #ffffff;
   text-decoration: none; }
   .btn:hover {
     background-color: #ffffff;
@@ -410,7 +410,8 @@ body {
   -ms-flex-positive: 0;
   flex-grow: 0;
   max-width: 300px;
-  margin: -75px 10px 20px 10px; }
+  margin: -75px 10px 20px 10px;
+  color: #ffffff; }
   .profile-block__info .profile-block__img {
     width: 250px;
     height: 250px;
@@ -451,7 +452,8 @@ body {
       .profile-tabs .profile-tabs__nav .fa:hover {
         color: #ffffff; }
   .profile-tabs .tab {
-    padding: 10px; }
+    padding: 10px;
+    color: #ffffff; }
     @media (min-width: 760px) {
       .profile-tabs .tab {
         padding-top: 20px; } }
@@ -854,7 +856,8 @@ body {
   width: 65px;
   height: 65px;
   margin-right: 15px;
-  background-color: #dd3c26; }
+  background-color: #dd3c26;
+  color: #ffffff; }
   .resume-item__icon .fa {
     font-size: 25px; }
   .resume-item__icon:after, .skill-percentage:after {
