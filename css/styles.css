@@ -285,7 +285,6 @@ body {
     top: 0; }
     @media (min-width: 760px) {
       .anchor-wrapper .anchor {
-        position: absolute;
         top: -178px; } }
 
 /****** MAIN HEADERS BASE STYLES ******/

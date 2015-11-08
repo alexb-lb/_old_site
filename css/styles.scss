@@ -360,7 +360,6 @@ body {
     top: 0;
 
     @media (min-width: $media-m) {
-      position: absolute;
       top: -178px;
     }
   }
@@ -964,7 +963,6 @@ $article-font-size-m: 45px;
 
 .project-img{
   @extend .project-info;
-  //max-width: 500px;
 
   @media (min-width: $media-m) {
     max-width: $wrapper-width * 0.6;
