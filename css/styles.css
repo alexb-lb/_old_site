@@ -490,7 +490,7 @@ body {
 
 /**********BLOG****************/
 .blog__cat {
-  max-width: 500px;
+  max-width: 400px;
   margin: auto; }
   .blog__cat img {
     width: 100%; }
