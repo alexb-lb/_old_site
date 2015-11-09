@@ -370,8 +370,7 @@ body {
   margin-top: 40px;
   padding-bottom: 50px;
   min-height: 535px;
-  background: url("../images/map_pattern.png") 0 50px repeat-x;
-  background-color: #dd3c26; }
+  background: url("../images/map_pattern.png") 0 50px repeat-x, #dd3c26; }
   .profile-block__wrapper .profile-tabs__bg {
     height: 50px;
     background-color: #5b5a5a; }
@@ -1008,8 +1007,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   padding: 0 20px;
-  background: url("../images/map_pattern.png") 0 50px repeat-x;
-  background-color: #dd3c26; }
+  background: url("../images/map_pattern.png") 0 50px repeat-x, #dd3c26; }
   @media (min-width: 760px) {
     .contacts__mail-block {
       -webkit-box-pack: end;

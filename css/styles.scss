@@ -476,8 +476,8 @@ $article-font-size-m: 45px;
   margin-top: 40px;
   padding-bottom: 50px;
   min-height: 535px;
-  background: url("../images/map_pattern.png") 0 50px repeat-x;
-  background-color: $color-4;
+  background: url("../images/map_pattern.png") 0 50px repeat-x, $color-4;
+  //background-color: $color-4;
 
   .profile-tabs__bg {
     height: 50px;
@@ -1293,8 +1293,8 @@ $article-font-size-m: 45px;
   -ms-flex-align: center;
   align-items: center;
   padding: 0 20px;
-  background: url("../images/map_pattern.png") 0 50px repeat-x;
-  background-color: $color-4;
+  background: url("../images/map_pattern.png") 0 50px repeat-x, $color-4;
+  //background-color: $color-4;
 
   @media (min-width: $media-m) {
     -webkit-box-pack: end;
