@@ -488,6 +488,13 @@ body {
   .swag-container p, .swag-container div, .swag-container section, .swag-container span {
     max-width: 100%; }
 
+/**********BLOG****************/
+.blog__cat {
+  max-width: 500px;
+  margin: auto; }
+  .blog__cat img {
+    width: 100%; }
+
 /******** PORTFOLIO-GALLERY block **********/
 .gallery {
   display: -webkit-box;
