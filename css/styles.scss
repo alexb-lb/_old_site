@@ -1565,6 +1565,47 @@ $article-font-size-m: 45px;
 
 /********ANIMATION STYLES************/
 /******delay******/
+@keyframes icoZoom {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1);
+    transform: scale3d(.1, .1, .1);
+  }
+
+  15% {
+    opacity: 1;
+    transform: scale3d(.6, .6, .6);
+  }
+
+  30%{
+    transform: scale3d(1, 1, 1);
+  }
+
+  40%{
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  55%{
+    transform: scale3d(0.7, 0.7, 0.7);
+  }
+
+  70%{
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  80%{
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+.icoZoom {
+  animation-name: icoZoom;
+  -webkit-animation-name: icoZoom;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+}
+
+/****timing for elements***/
 .delay-02s{
   animation-delay: 150ms;
 }
