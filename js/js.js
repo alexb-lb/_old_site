@@ -95,6 +95,21 @@ function tabsScript() {
             activeTab.classList.add('tab--opacity-1');
         }, 0);
     }
+
+    /*анимация на активной иконке*/
+    for (var x = 0; x < icons.length; x++) {
+        icons[x].addEventListener('click', animateIcon)
+    }
+
+    function animateIcon(e) {
+        e.currentTarget.classList.remove('icoZoom');
+        var target = e.currentTarget;
+
+        setTimeout(function (){
+            target.classList.add('icoZoom');
+        }, 0)
+    }
+
 }
 
 /*SPRITE GALLERY resize*/
