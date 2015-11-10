@@ -1558,3 +1558,78 @@ $article-font-size-m: 45px;
     }
   }
 }
+
+
+
+/********ANIMATION STYLES************/
+/******delay******/
+.delay-02s{
+  animation-delay: 150ms;
+}
+
+.delay-04s{
+  animation-delay: 300ms;
+}
+
+.delay-06s{
+  animation-delay: 450ms;
+}
+
+.delay-08s{
+  animation-delay: 600ms;
+
+}
+
+
+///******сво€ анимаци€*******/
+/*„то бы запустить анимаци, добавить класс hijackLeft к нужным
+*элементам и раскоментировать код в js*/
+
+
+//@keyframes hijackLeft {
+//  from, to {
+//    //animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+//    animation-timing-function: linear;
+//  }
+//
+//  0% {
+//    opacity: 0;
+//    transform: translate3d(-2000px, 0, 0);
+//  }
+//
+//  to {
+//    transform: none;
+//  }
+//}
+//
+//.hijackLeft  {
+//  animation-name: hijackLeft;
+//  animation-duration: 600ms;
+//  animation-fill-mode: backwards;
+//}
+//
+//
+///******shakes after main animation******/
+//@keyframes shakeRight {
+//  from, 33%, 66%, to {
+//    animation-timing-function: linear;
+//  }
+//
+//  33%{
+//    transform: translate3d(30px, 0, 0);
+//  }
+//
+//  66%{
+//    transform: translate3d(-10px, 0, 0);
+//  }
+//
+//  to{
+//    transform: none;
+//  }
+//}
+//
+//.shakeRight{
+//  animation-name: shakeRight;
+//  animation-duration: 150ms;
+//  animation-fill-mode: both;
+//}

@@ -1221,4 +1221,21 @@ body {
         border-top: 2px solid #b6b5b2;
         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6); } }
 
+/********ANIMATION STYLES************/
+/******delay******/
+.delay-02s {
+  animation-delay: 150ms; }
+
+.delay-04s {
+  animation-delay: 300ms; }
+
+.delay-06s {
+  animation-delay: 450ms; }
+
+.delay-08s {
+  animation-delay: 600ms; }
+
+/*╫Єю с√ чряєёЄшЄ№ рэшьрЎш, фюсртшЄ№ ъырёё hijackLeft ъ эєцэ√ь
+*¤ыхьхэЄрь ш ЁрёъюьхэЄшЁютрЄ№ ъюф т js*/
+
 /*# sourceMappingURL=styles.css.map */

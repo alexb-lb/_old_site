@@ -155,3 +155,16 @@ function changeHref() {
     }
 }
 
+
+/* ****animations**** */
+/*сравнивая анимации, понял, что для отображения в главное меню - очень долго*/
+//menu.addEventListener('animationend', function (e) {
+//  setTimeout(shake(e), 150);
+//});
+//
+//function shake(e) {
+//  if (e.target !== menu.lastElementChild) {
+//    menu.classList.toggle('shakeRight');
+//  }
+//}
+
