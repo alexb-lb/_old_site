@@ -107,7 +107,7 @@ function tabsScript() {
 
         setTimeout(function (){
             target.classList.add('icoZoom');
-        }, 50)
+        }, 20)
     }
 
 }
