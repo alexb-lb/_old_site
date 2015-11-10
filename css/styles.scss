@@ -923,6 +923,7 @@ $article-font-size-m: 45px;
 }
 
 .project-info{
+  z-index: 1;
   width: 100%;
   max-width: 600px;
   margin: 30px 10px;
@@ -983,6 +984,7 @@ $article-font-size-m: 45px;
 
 .project-img{
   @extend .project-info;
+  z-index: 2;
 
   @media (min-width: $media-m) {
     max-width: $wrapper-width * 0.6;
