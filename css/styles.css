@@ -1228,14 +1228,10 @@ body {
 /******delay******/
 @keyframes icoZoom {
   from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1);
-    transform: scale3d(0.1, 0.1, 0.1); }
-  15% {
-    opacity: 1;
-    transform: scale3d(0.6, 0.6, 0.6); }
-  30% {
+    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); }
+  30% {
+    transform: scale3d(0.5, 0.5, 0.5); }
   40% {
     transform: scale3d(1.2, 1.2, 1.2); }
   55% {
