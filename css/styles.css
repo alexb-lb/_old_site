@@ -432,7 +432,7 @@ body {
       -webkit-flex: 1 0 400px;
       -ms-flex: 1 0 400px;
       flex: 1 0 400px;
-      margin: -60px 10px 20px 10px; } }
+      margin: -70px 10px 20px 10px; } }
   .profile-tabs .profile-tabs__nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -448,7 +448,7 @@ body {
       color: #b6b5b2; }
       @media (min-width: 760px) {
         .profile-tabs .profile-tabs__nav .fa {
-          padding: 25px 35px; } }
+          padding: 35px; } }
       .profile-tabs .profile-tabs__nav .fa:hover {
         color: #ffffff; }
   .profile-tabs .tab {
