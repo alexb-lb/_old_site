@@ -27,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portfolio/item-1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49774775">
-              <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.4786036">
+              <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -416,7 +416,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447258019607</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added testing internal link">
+      <created>1447258486755</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1447258486755</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -455,7 +461,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added masterteh page" />
     <MESSAGE value="added Питер Пен page" />
     <MESSAGE value="added right pictures" />
     <MESSAGE value="added Sodrujesto project" />
@@ -480,7 +485,8 @@
     <MESSAGE value="changed some content" />
     <MESSAGE value="added assist font-family" />
     <MESSAGE value="added button to project 1, added &lt;base&gt; tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="added button to project 1, added &lt;base&gt; tag" />
+    <MESSAGE value="added testing internal link" />
+    <option name="LAST_COMMIT_MESSAGE" value="added testing internal link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -857,8 +863,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/item-1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49774775">
-          <caret line="53" column="81" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.4786036">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding />
         </state>
       </provider>
