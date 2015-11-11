@@ -167,7 +167,7 @@ function changeHref() {
 
         setTimeout(function () {
             history.replaceState(null, null, newHref);
-        }, 0);
+        }, 40);
 
         var anchor = document.getElementById('article-anchor');
         var anchorTop = anchor.getBoundingClientRect().top;
