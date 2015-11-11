@@ -71,7 +71,7 @@ body {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     background-color: #dd3c26; }
-  .btn:hover:not(.btn--disabled), .btn:hover:not(.btn--disabled) a {
+  .btn:hover:not(.btn--disabled) {
     background-color: #ffffff;
     color: #dd3c26;
     -webkit-transition: all 0.3s;
@@ -80,6 +80,10 @@ body {
 .btn--disabled {
   opacity: 0.4;
   cursor: default; }
+  .btn--disabled:hover {
+    border: 3px solid #ffffff;
+    background-color: #dd3c26;
+    color: #ffffff; }
 
 /******** HEADER ********/
 .main-header {

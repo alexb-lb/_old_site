@@ -98,14 +98,14 @@ body {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 
-  a{
+  a {
     color: $color-white;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     background-color: $color-4;
   }
 
-  &:hover:not(.btn--disabled), &:hover:not(.btn--disabled) a {
+  &:hover:not(.btn--disabled) {
     background-color: $color-white;
     color: $color-4;
     -webkit-transition: all 0.3s;
@@ -116,6 +116,12 @@ body {
 .btn--disabled{
   opacity: 0.4;
   cursor: default;
+
+  &:hover{
+    border: 3px solid $color-white;
+    background-color: $color-4;
+    color: $color-white;
+  }
 }
 
 /******** HEADER ********/
