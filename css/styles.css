@@ -78,7 +78,8 @@ body {
     transition: all 0.3s; }
 
 .btn--disabled {
-  opacity: 0.4; }
+  opacity: 0.4;
+  cursor: default; }
 
 /******** HEADER ********/
 .main-header {
