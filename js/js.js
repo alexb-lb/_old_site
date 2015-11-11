@@ -160,10 +160,15 @@ window.addEventListener('DOMContentLoaded', changeHref);
 
 function changeHref() {
     var loc = location.href;
+    console.log(loc);
 
     if (loc.indexOf("#") !== -1) {
         var newHrefEnds = loc.indexOf("#");
+        console.log(newHrefEnds);
+
         var newHref = loc.slice(0, newHrefEnds);
+        console.log(newHref);
+
         setTimeout(function () {
             history.replaceState(null, null, newHref);
         }, 0);
