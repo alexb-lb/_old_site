@@ -39,7 +39,7 @@ figure {
 
 /********** BASE RULES *********/
 body {
-  font-family: "Play";
+  font-family: "Play", "Arial", sans-serif;
   font-size: 16px;
   color: #3d3c3c;
   min-width: 275px; }
@@ -128,7 +128,7 @@ body {
   .top-name__block .name {
     padding: 20px;
     background-color: #dd3c26;
-    font: bold 40px "Play";
+    font: bold 40px "Play", "Arial", sans-serif;
     color: #fff;
     text-transform: uppercase; }
   .top-name__block .name__definition {
