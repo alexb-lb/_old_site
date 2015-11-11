@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d5fdafe-7987-4148-af2c-6f7c4f17eaad" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/item-1/index.html" afterPath="$PROJECT_DIR$/portfolio/item-1/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css.map" afterPath="$PROJECT_DIR$/css/styles.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.scss" afterPath="$PROJECT_DIR$/css/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -25,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/portfolio/item-1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-41.346153">
-              <caret line="108" column="41" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.5168919">
+              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resume/index.html">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="111" column="42" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
+            <state vertical-scroll-proportion="944.3077">
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -50,16 +52,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/styles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.079161815">
-              <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -77,7 +69,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/blog/index.html" />
         <option value="$PROJECT_DIR$/portfolio/index.html" />
-        <option value="$PROJECT_DIR$/portfolio/item-1/index.html" />
         <option value="$PROJECT_DIR$/portfolio/item-2/index.html" />
         <option value="$PROJECT_DIR$/portfolio/item-3/index.html" />
         <option value="$PROJECT_DIR$/portfolio/item-4/index.html" />
@@ -94,6 +85,7 @@
         <option value="$PROJECT_DIR$/js/js.js" />
         <option value="$PROJECT_DIR$/resume/index.html" />
         <option value="$PROJECT_DIR$/css/styles.scss" />
+        <option value="$PROJECT_DIR$/portfolio/item-1/index.html" />
       </list>
     </option>
   </component>
@@ -105,9 +97,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="982" />
+    <option name="x" value="984" />
     <option name="y" value="2" />
-    <option name="width" value="949" />
+    <option name="width" value="941" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -136,7 +128,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Google Drive/Webstorm/My_portfolio" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -415,16 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1447200929439</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="added assist font-family">
+      <created>1447203132205</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1447203132205</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="982" y="2" width="949" height="1050" extended-state="0" />
+    <frame x="984" y="2" width="941" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14362273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -434,6 +431,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -454,7 +452,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added test favico in dan hecho page" />
     <MESSAGE value="added favicon to each page" />
     <MESSAGE value="added masterteh page" />
     <MESSAGE value="added Питер Пен page" />
@@ -479,13 +476,22 @@
     <MESSAGE value="corrected the h1 tag" />
     <MESSAGE value="corrected icoZoom animation" />
     <MESSAGE value="changed some content" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed some content" />
+    <MESSAGE value="added assist font-family" />
+    <option name="LAST_COMMIT_MESSAGE" value="added assist font-family" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -723,13 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portfolio/item-1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/item-5/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3076923">
@@ -790,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.461538">
           <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,6 +820,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40653154">
+          <caret line="108" column="41" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.038288288">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/js.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -830,26 +844,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-41.346153">
-          <caret line="108" column="41" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resume/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="111" column="42" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.079161815">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        <state vertical-scroll-proportion="944.3077">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/portfolio/item-1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5168919">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
           <folding />
         </state>
       </provider>

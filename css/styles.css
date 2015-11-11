@@ -63,12 +63,22 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   color: #ffffff;
-  text-decoration: none; }
-  .btn:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .btn a {
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #dd3c26; }
+  .btn:hover:not(.btn--disabled), .btn:hover:not(.btn--disabled) a {
     background-color: #ffffff;
     color: #dd3c26;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
+
+.btn--disabled {
+  opacity: 0.4; }
 
 /******** HEADER ********/
 .main-header {
@@ -654,7 +664,7 @@ body {
     color: #3d3c3c;
     max-width: 100%; }
 
-/*hover-¤ЇЇхъЄ√ яЁш эртхфхэшш эр сыюъ*/
+/*hover-??????? ??? ????????? ?? ????*/
 .gallery-item:hover .gallery-item__img {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -699,6 +709,42 @@ body {
       justify-content: space-between;
       align-items: flex-start; } }
 
+/*ъэюяъш*/
+.project-btn-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto 5px auto; }
+  @media (min-width: 760px) {
+    .project-btn-container {
+      margin: 15px auto; } }
+
+.project-btn--prev, .project-btn--next {
+  padding: 10px 10px 10px 0;
+  margin: 0 5px;
+  background-color: #dd3c26;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal; }
+  .project-btn--prev .fa, .project-btn--next .fa {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 16px;
+    text-align: start; }
+  @media (min-width: 760px) {
+    .project-btn--prev, .project-btn--next {
+      padding: 10px 20px 10px 10px;
+      margin: 0 30px; } }
+
+.project-btn--next {
+  padding: 10px 0 10px 10px; }
+  @media (min-width: 760px) {
+    .project-btn--next {
+      padding: 10px 10px 10px 20px; } }
+  .project-btn--next .fa {
+    text-align: end; }
+
+/*шэЇюсыюъ*/
 .project-info, .project-img {
   z-index: 1;
   width: 100%;
@@ -922,7 +968,7 @@ body {
   color: #ffffff;
   background-color: #dd3c26; }
 
-/*skills block (ыхтюёЄюЁюээшщ)*/
+/*skills block (?????????????)*/
 .skill-item .resume-item__block {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1259,7 +1305,7 @@ body {
 .delay-08s {
   animation-delay: 600ms; }
 
-/*╫Єю с√ чряєёЄшЄ№ рэшьрЎш, фюсртшЄ№ ъырёё hijackLeft ъ эєцэ√ь
-*¤ыхьхэЄрь ш ЁрёъюьхэЄшЁютрЄ№ ъюф т js*/
+/*??? ?? ????????? ???????, ???????? ????? hijackLeft ? ??????
+*????????? ? ???????????????? ??? ? js*/
 
 /*# sourceMappingURL=styles.css.map */

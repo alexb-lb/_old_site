@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
-  <link href="/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/animate.min.css" rel="stylesheet">
-  <link href="/css/styles.css" rel="stylesheet">
+  <base href="http://en1ight.github.io/"/>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
   <title>Александр Бобренко, веб-разработчик</title>
 </head>
 <body>
@@ -48,8 +49,12 @@
       </div>
     </header>
 
-    <section class="project-wrapper max-width-limited">
+    <div class="project-btn-container max-width-limited">
+      <div class="btn project-btn--prev btn--disabled"><a><i class="fa fa-arrow-left"></i>предыдущий</a></div>
+      <div class="btn project-btn--next"><a href="#">следующий<i class="fa fa-arrow-right"></i></a></div>
+    </div>
 
+    <section class="project-wrapper max-width-limited">
      <section class="project-info animated fadeInRight">
        <header><h3>Информация</h3></header>
 
@@ -89,7 +94,7 @@
 
      <section class="project-img">
        <header><h3>Макет</h3></header>
-       <figure class="project-img__container"><img src="/images/sites/palmash.jpg"></figure>
+       <figure class="project-img__container"><img src="images/sites/palmash.jpg"></figure>
      </section>
 
     </section>
@@ -104,6 +109,6 @@
   <a class="fa fa-envelope" href="http://en1ight.github.io/contacts#article-anchor"></a>
 </footer>
 
-<script src="/js/js.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>

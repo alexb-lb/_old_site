@@ -27,7 +27,7 @@ dd, dt {
   margin: 0;
 }
 
-p{
+p {
   margin: 5px 0;
   padding: 0;
 }
@@ -47,20 +47,20 @@ button {
   border: 0;
 }
 
-a{
+a {
   text-decoration: none;
   outline: none;
   color: $color-link;
   transition: all 0.2s;
 
-  &:hover{
+  &:hover {
     text-decoration: none;
     transition: all 0.2s;
     color: $color-4;
   }
 }
 
-figure{
+figure {
   padding: 0;
   margin: 0;
 }
@@ -79,10 +79,11 @@ body {
   padding: 0 10px;
 }
 
-.margin-top{
+.margin-top {
   margin-top: 40px;
 }
-.btn{
+
+.btn {
   padding: 7px 30px;
   border: 3px solid $color-white;
   background-color: $color-4;
@@ -94,8 +95,17 @@ body {
   cursor: pointer;
   color: $color-white;
   text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 
-  &:hover{
+  a{
+    color: $color-white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: $color-4;
+  }
+
+  &:hover:not(.btn--disabled), &:hover:not(.btn--disabled) a {
     background-color: $color-white;
     color: $color-4;
     -webkit-transition: all 0.3s;
@@ -103,6 +113,9 @@ body {
   }
 }
 
+.btn--disabled{
+  opacity: 0.4;
+}
 
 /******** HEADER ********/
 .main-header {
@@ -306,8 +319,6 @@ body {
   }
 }
 
-
-
 /*ICONS IN TOP NAVIGATION*/
 .ico {
   min-width: 45%;
@@ -438,7 +449,7 @@ $article-font-size-m: 45px;
   }
 }
 
-.article-h3{
+.article-h3 {
   margin-bottom: 10px;
 }
 
@@ -446,7 +457,7 @@ $article-font-size-m: 45px;
   max-width: 100%;
   color: $color-2;
 
-  & p, & span, & div, & section{
+  & p, & span, & div, & section {
     color: $color-2;
     text-align: center;
   }
@@ -455,9 +466,6 @@ $article-font-size-m: 45px;
     font-weight: bold;
   }
 }
-
-
-
 
 /********* PROFILE block **********/
 .profile {
@@ -593,13 +601,13 @@ $article-font-size-m: 45px;
       text-indent: 20px;
     }
 
-    a{
+    a {
       color: $color-5;
       font-weight: bold;
       text-decoration: underline;
       transition: all 0.2s;
 
-      &:hover{
+      &:hover {
         text-decoration: none;
         transition: all 0.2s;
         color: $color-link;
@@ -614,7 +622,7 @@ $article-font-size-m: 45px;
   background: url("../images/rails_bg.jpg") fixed center bottom;
 }
 
-.swag-container{
+.swag-container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -627,30 +635,23 @@ $article-font-size-m: 45px;
   text-shadow: 2px 2px $color-base;
   text-align: center;
 
-  p, div, section, span{
+  p, div, section, span {
     max-width: 100%;
   }
 }
 
-
-
-
 /**********BLOG****************/
-.blog__cat{
+.blog__cat {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 400px;
   background-color: #000;
 
-  img{
+  img {
     height: 100%;
   }
 }
-
-
-
-
 
 /******** PORTFOLIO-GALLERY block **********/
 .gallery {
@@ -717,7 +718,7 @@ $article-font-size-m: 45px;
   }
 }
 
-.gallery-item__hover-block{
+.gallery-item__hover-block {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -735,7 +736,7 @@ $article-font-size-m: 45px;
   overflow: hidden;
 }
 
-.gallery-item__link{
+.gallery-item__link {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -825,8 +826,7 @@ $article-font-size-m: 45px;
   }
 }
 
-
-/*hover-эффекты при наведении на блок*/
+/*hover-??????? ??? ????????? ?? ????*/
 .gallery-item:hover {
 
   .gallery-item__img {
@@ -837,11 +837,10 @@ $article-font-size-m: 45px;
     transition: all 0.3s;
   }
 
-  .gallery-item__link{
+  .gallery-item__link {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     background-color: rgba(0, 0, 0, 0.7);
-
 
     a {
       -webkit-transform: scale(1);
@@ -907,10 +906,9 @@ $article-font-size-m: 45px;
   }
 }
 
-
 /******PORTFOLIO ITEM BLOCK*****/
 
-.project-wrapper{
+.project-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -922,7 +920,55 @@ $article-font-size-m: 45px;
   }
 }
 
-.project-info{
+/*кнопки*/
+.project-btn-container{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto 5px auto;
+
+  @media (min-width: $media-m) {
+    margin: 15px auto;
+  }
+}
+
+.project-btn--prev{
+  padding: 10px 10px 10px 0;
+  margin: 0 5px;
+  background-color: $color-4;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+
+  .fa{
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 16px;
+    text-align: start;
+  }
+
+  @media (min-width: $media-m) {
+    padding: 10px 20px 10px 10px;
+    margin: 0 30px;
+  }
+}
+
+.project-btn--next{
+  @extend .project-btn--prev;
+  padding: 10px 0 10px 10px;
+
+  @media (min-width: $media-m) {
+    padding: 10px 10px 10px 20px;
+  }
+
+  .fa{
+    text-align: end;
+  }
+}
+
+
+/*инфоблок*/
+.project-info {
   z-index: 1;
   width: 100%;
   max-width: 600px;
@@ -933,24 +979,24 @@ $article-font-size-m: 45px;
     max-width: $wrapper-width * 0.4;
   }
 
-  & > header{
+  & > header {
     background: url("../images/title_line_bg.jpg") repeat-x 0 50%;
     margin-bottom: 30px;
 
-    h3{
+    h3 {
       @extend .resume-item__header;
     }
   }
 }
 
-.project__infoblock{
+.project__infoblock {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
   margin-bottom: 30px;
 
-  header{
+  header {
     margin-left: 7%;
     margin-bottom: 7px;
     padding: 5px 10px;
@@ -965,7 +1011,7 @@ $article-font-size-m: 45px;
     }
   }
 
-  .infoblock__text{
+  .infoblock__text {
     background-color: $color-7;
     margin-right: 7%;
     padding: 5px 10px;
@@ -976,13 +1022,12 @@ $article-font-size-m: 45px;
     }
   }
 
-  a{
+  a {
     font-weight: bold;
   }
 }
 
-
-.project-img{
+.project-img {
   @extend .project-info;
   z-index: 2;
 
@@ -991,10 +1036,10 @@ $article-font-size-m: 45px;
   }
 }
 
-.project-img__container{
+.project-img__container {
   background-color: $color-7;
 
-  img{
+  img {
     width: 100%;
 
     @media (min-width: $media-m) {
@@ -1003,9 +1048,8 @@ $article-font-size-m: 45px;
   }
 }
 
-
 /******** RESUME block *******/
-.resume{
+.resume {
   margin-bottom: 30px;
 }
 
@@ -1111,8 +1155,6 @@ $article-font-size-m: 45px;
   }
 }
 
-
-
 .resume-item__icon {
   position: relative;
   display: -webkit-box;
@@ -1202,7 +1244,7 @@ $article-font-size-m: 45px;
   background-color: $color-4;
 }
 
-/*skills block (левосторонний)*/
+/*skills block (?????????????)*/
 .skill-item .resume-item__block {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1252,8 +1294,7 @@ $article-font-size-m: 45px;
   }
 }
 
-
-.button-wrapper{
+.button-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1266,10 +1307,8 @@ $article-font-size-m: 45px;
   margin-top: 20px;
 }
 
-
-
 /*********** CONTACTS block *************/
-.contacts-wrapper{
+.contacts-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1283,7 +1322,7 @@ $article-font-size-m: 45px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
-  @media (min-width: $media-m){
+  @media (min-width: $media-m) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -1298,7 +1337,7 @@ $article-font-size-m: 45px;
 
 /*****E-mail block******/
 
-.contacts__mail-block{
+.contacts__mail-block {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1330,7 +1369,7 @@ $article-font-size-m: 45px;
   }
 }
 
-.mail-form{
+.mail-form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1352,8 +1391,7 @@ $article-font-size-m: 45px;
   max-width: 450px;
 }
 
-
-.mail-text{
+.mail-text {
   max-width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -1364,15 +1402,14 @@ $article-font-size-m: 45px;
   background-color: $color-white;
 }
 
-.mail-message{
+.mail-message {
   @extend .mail-text;
   resize: none;
   min-height: 100px;
 }
 
-
 /*****Contacts info block******/
-.contacts__info-block{
+.contacts__info-block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1404,7 +1441,7 @@ $article-font-size-m: 45px;
   }
 }
 
-.info-block_item{
+.info-block_item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1436,7 +1473,7 @@ $article-font-size-m: 45px;
   }
 }
 
-.contacts-ico{
+.contacts-ico {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1457,13 +1494,13 @@ $article-font-size-m: 45px;
     margin-right: 20px;
   }
 
-  .fa{
+  .fa {
     font-size: 40px;
     color: $color-4;
   }
 }
 
-.contacts-text{
+.contacts-text {
   margin-top: 20px;
   color: $color-base;
 
@@ -1471,8 +1508,6 @@ $article-font-size-m: 45px;
     margin-top: 0;
   }
 }
-
-
 
 /************ FOOTER ***********/
 .main-footer {
@@ -1497,7 +1532,7 @@ $article-font-size-m: 45px;
     justify-content: center;
   }
 
-  a{
+  a {
     text-decoration: none;
     color: inherit;
   }
@@ -1561,8 +1596,6 @@ $article-font-size-m: 45px;
   }
 }
 
-
-
 /********ANIMATION STYLES************/
 /******delay******/
 @keyframes icoZoom {
@@ -1571,23 +1604,23 @@ $article-font-size-m: 45px;
     transform: scale3d(1, 1, 1);
   }
 
-  30%{
+  30% {
     transform: scale3d(0.5, 0.5, 0.5);
   }
 
-  40%{
+  40% {
     transform: scale3d(1.2, 1.2, 1.2);
   }
 
-  55%{
+  55% {
     transform: scale3d(0.7, 0.7, 0.7);
   }
 
-  70%{
+  70% {
     transform: scale3d(1.1, 1.1, 1.1);
   }
 
-  80%{
+  80% {
     transform: scale3d(0.9, 0.9, 0.9);
   }
 }
@@ -1600,28 +1633,26 @@ $article-font-size-m: 45px;
 }
 
 /****timing for elements***/
-.delay-02s{
+.delay-02s {
   animation-delay: 150ms;
 }
 
-.delay-04s{
+.delay-04s {
   animation-delay: 300ms;
 }
 
-.delay-06s{
+.delay-06s {
   animation-delay: 450ms;
 }
 
-.delay-08s{
+.delay-08s {
   animation-delay: 600ms;
 
 }
 
-
-///******своя анимация*******/
-/*Что бы запустить анимаци, добавить класс hijackLeft к нужным
-*элементам и раскоментировать код в js*/
-
+///******???? ????????*******/
+/*??? ?? ????????? ???????, ???????? ????? hijackLeft ? ??????
+*????????? ? ???????????????? ??? ? js*/
 
 //@keyframes hijackLeft {
 //  from, to {
