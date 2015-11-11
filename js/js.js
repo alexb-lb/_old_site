@@ -168,6 +168,12 @@ function changeHref() {
         setTimeout(function () {
             history.replaceState(null, null, newHref);
         }, 0);
+
+        var anchor = document.getElementById('article-anchor');
+        var anchorTop = anchor.getBoundingClientRect().top;
+        if(anchorTop > 20){
+            window.scrollBy(0, anchorTop);
+        }
     }
 }
 
