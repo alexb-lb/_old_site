@@ -176,12 +176,11 @@ function changeHref() {
         }, 0);
 
         /*for IE10-IE11*/
-        /*fixed by added '/' before hash*/
-        //var anchor = document.getElementById('article-anchor');
-        //var anchorTop = anchor.getBoundingClientRect().top;
-        //if(anchorTop > 20){
-        //    window.scrollBy(0, anchorTop);
-        //}
+        var anchor = document.getElementById('article-anchor');
+        var anchorTop = anchor.getBoundingClientRect().top;
+        if(anchorTop > 20){
+            window.scrollBy(0, anchorTop);
+        }
     }
 }
 
