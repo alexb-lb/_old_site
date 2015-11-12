@@ -164,6 +164,7 @@ function changeHref() {
     if (loc.indexOf("#") !== -1) {
         var newHrefEnds;
 
+        /*дополнительный слеш перед хэшем пришлось добавить, что бы IE правильно отображал переходы*/
         if(loc.indexOf("/#") !== -1){
             newHrefEnds = loc.indexOf("/#");
         } else {

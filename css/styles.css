@@ -714,7 +714,7 @@ body {
       justify-content: space-between;
       align-items: flex-start; } }
 
-/*ъэюяъш*/
+/*╨║╨╜╨╛╨┐╨║╨╕*/
 .project-btn-container {
   width: 90%;
   display: flex;
@@ -749,7 +749,7 @@ body {
   .project-btn--next .fa {
     text-align: end; }
 
-/*шэЇюсыюъ*/
+/*╨╕╨╜╤Д╨╛╨▒╨╗╨╛╨║*/
 .project-info, .project-img {
   z-index: 1;
   width: 100%;
@@ -1310,7 +1310,6 @@ body {
 .delay-08s {
   animation-delay: 600ms; }
 
-/*??? ?? ????????? ???????, ???????? ????? hijackLeft ? ??????
-*????????? ? ???????????????? ??? ? js*/
+/*╨┤╨╗╤П ╨╖╨░╨┐╤Г╤Б╨║╨░ ╨┤╨╛╨▒╨░╨▓╨╕╤В╤М ╨║ ╤Н╨╗╨╡╨╝╨╡╨╜╤В╤Г ╨║╨╗╨░╤Б╤Б hijackLeft, ╨┐╨╛╨╕╨│╤А╨░╤В╤М╤Б╤П ╤Б ╤В╨░╨╣╨╝╨╕╨╜╨│╨░╨╝╨╕ js ╨╕ css*/
 
 /*# sourceMappingURL=styles.css.map */
