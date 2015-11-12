@@ -175,11 +175,13 @@ function changeHref() {
             history.replaceState(null, null, newHref);
         }, 0);
 
-        var anchor = document.getElementById('article-anchor');
-        var anchorTop = anchor.getBoundingClientRect().top;
-        if(anchorTop > 20){
-            window.scrollBy(0, anchorTop);
-        }
+        /*for IE10-IE11*/
+        /*fixed by added '/' before hash*/
+        //var anchor = document.getElementById('article-anchor');
+        //var anchorTop = anchor.getBoundingClientRect().top;
+        //if(anchorTop > 20){
+        //    window.scrollBy(0, anchorTop);
+        //}
     }
 }
 
