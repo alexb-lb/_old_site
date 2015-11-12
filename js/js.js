@@ -173,7 +173,7 @@ function changeHref() {
         var newHref = loc.slice(0, newHrefEnds);
         setTimeout(function () {
             history.replaceState(null, null, newHref);
-        }, 40);
+        }, 0);
 
         var anchor = document.getElementById('article-anchor');
         var anchorTop = anchor.getBoundingClientRect().top;
