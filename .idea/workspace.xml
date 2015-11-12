@@ -27,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resume/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7736486">
-              <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.5788288">
+              <caret line="259" column="82" selection-start-line="259" selection-start-column="82" selection-end-line="259" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -181,12 +181,6 @@
       <created>1447012029557</created>
       <option name="number" value="Default" />
       <updated>1447012029557</updated>
-    </task>
-    <task id="LOCAL-00013" summary="changed background for multibg">
-      <created>1447031398540</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1447031398540</updated>
     </task>
     <task id="LOCAL-00014" summary="added all remaining projects in portfolio section">
       <created>1447077994623</created>
@@ -476,7 +470,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447323367664</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="added resume (word)">
+      <created>1447337320616</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1447337320617</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -515,7 +515,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added some animate.css styles in portfolio and resume" />
     <MESSAGE value="added experimental styles in first project" />
     <MESSAGE value="added tyles in all project pages" />
     <MESSAGE value="added styles in missed project 5 page" />
@@ -540,7 +539,8 @@
     <MESSAGE value="changed all #article-anchor into /#article-anchor" />
     <MESSAGE value="correting href cuting in js and corrected links in main page" />
     <MESSAGE value="different comments changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="different comments changes" />
+    <MESSAGE value="added resume (word)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added resume (word)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -920,8 +920,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resume/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7736486">
-          <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.5788288">
+          <caret line="259" column="82" selection-start-line="259" selection-start-column="82" selection-end-line="259" selection-end-column="82" />
           <folding />
         </state>
       </provider>
