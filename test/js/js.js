@@ -54,7 +54,7 @@ function calcutator(formId) {
       /*...other cases...*/
     }
 
-    var valueArr = form.querySelectorAll("* [name]");
+    var valueArr = form.querySelectorAll("* [numeric]");
     var correctFields = true;
     for (var i = 0; i < valueArr.length; i++) {
       if (valueArr[i].value === "") {
@@ -88,13 +88,7 @@ function calcutator(formId) {
 
   // function checks that the field is not empty
   function checkSelect(target) {
-    if (target.value !== "") {
-      return target.value;
-    } else {
-      createErrorMsg(target, "js__error", "пожалуйста, выберите значение");
-      target.focus();
-      return false;
-    }
+  /*code if it needs*/
   }
 
   // function checks if entered value is a number
@@ -150,11 +144,12 @@ calcutator("#calc-form");
 /***************/
 /*SIMPLE SLIDER in prototype style*/
 /***************/
-function Slider(sliderId, imgWidth) {
+function Slider(sliderId, imgWidth, animationTime) {
   this.slider = document.querySelector(sliderId);
   this.slideWidth = imgWidth;
   this.init();
   this._clearStyles();
+  this.animationTime = animationTime;
 }
 
 Slider.prototype = {
@@ -266,7 +261,7 @@ Slider.prototype = {
 
       var timePassed = Date.now() - start;
 
-      if (timePassed >= 2000) { //easy to make animation time like input parameter
+      if (timePassed >= self.animationTime) { //easy to make animation time like input parameter
         clearInterval(timer); //ends after 2 sec
 
         setTimeout(function (){
@@ -288,7 +283,7 @@ Slider.prototype = {
 
     //while timePassed goes from 0 to 2000 images slides
     function draw(timePassed, current, nextPrev) {
-      var step = parseInt(self.slideWidth) / 2000;
+      var step = parseInt(self.slideWidth) / self.animationTime;
       var counter = timePassed * step;
       current.style.left = "-" + counter + 'px';
       nextPrev.style.left = (parseInt(self.slideWidth) - counter) + "px";
@@ -296,6 +291,7 @@ Slider.prototype = {
   },
 
 
+  //deletes styles after animation ends
   _clearStyles: function () {
     var self = this;
     if (document.body.classList) {
@@ -322,7 +318,7 @@ Slider.prototype = {
   },
 };
 
-var mainSlider = new Slider("#main-slider", "1200px");
+var mainSlider = new Slider("#main-slider", "1200px", "2000");
 
 var timerId = setTimeout(function tick() {
   mainSlider.next();
