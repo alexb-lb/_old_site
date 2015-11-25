@@ -148,78 +148,119 @@ calcutator("#calc-form");
 
 
 /***************/
-/*SIMPLE SLIDER*/
+/*SIMPLE SLIDER in prototype style*/
 /***************/
-function Slider(sliderId) {
-  var slider, slides, currentSlide, nextSlide, prevSlide, slideWidth, slideVisible;
+function Slider(sliderId, imgWidth) {
+  this.slider = document.querySelector(sliderId);
+  this.slideWidth = imgWidth;
+  this.init();
+  this._clearStyles();
+}
 
-  /*сlasses can be defined by the arguments*/
-  slider = document.querySelector(sliderId);
-  slider.style.position = "relative"; //definitely positioned
-  slides = slider.children;
-  slideWidth = "1200px";
-  slideVisible = "js__slider-image--visible";
-  currentSlide = "js__slider-image--current";
-  nextSlide = "js__slider-image--next";
-  prevSlide = "js__slider-image--prev";
+Slider.prototype = {
 
-  //adding classes
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].className += " js__slider-image";
-  }
-  slides[0].className += " " + currentSlide; //not classList!! Not working in ie8
+  init: function () {
+    this.slider.style.position = "relative"; //definitely positioned
+    this.slides = this.slider.children;
+    this.index = 0;
+    this.total = this.slides.length;
+    this.slideVisible = "js__slider-image--visible";
+    this.currentSlide = "js__slider-image--current";
+
+    //adding classes
+    for (var i = 0; i < this.total; i++) {
+      this.slides[i].className += " js__slider-image";
+    }
+    this.slides[0].className += " " + this.currentSlide; //not classList!! Not working in ie8
+  },
 
 
-  //next button for loop
-  function next() {
-    var index;
-    index = 0;
+  next: function () {
+    var self = this;
+    self.index = 0;
 
     if (document.body.classList) { //IE9- check ("document.body.classList")
 
-      while (!slides[index].classList.contains(currentSlide)) {
-        index++;
+      while (!self.slides[self.index].classList.contains(self.currentSlide)) {
+        self.index++;
       }
 
       /*animation through transformation to not overload the processor*/
-      if (index < slides.length - 1) {
-        slides[index + 1].classList.add(slideVisible);
-        slides[index + 1].style.transform = "translate(" + slideWidth + ", 0)";
+      if (self.index < self.total - 1) {
+        self.slides[self.index + 1].classList.add(self.slideVisible);
+        self.slides[self.index + 1].style.transform = "translate(" + self.slideWidth + ", 0)";
 
         setTimeout(function () {
-          slides[index].style.transform = "translate(-" + slideWidth + ", 0)";
-          slides[index + 1].style.transform = "translate(0, 0)";
+          self.slides[self.index].style.transform = "translate(-" + self.slideWidth + ", 0)";
+          self.slides[self.index + 1].style.transform = "translate(0, 0)";
         }, 100);
       } else {
-        slides[0].classList.add(slideVisible);
-        slides[0].style.transform = "translate(" + slideWidth + ", 0)";
+        self.slides[0].classList.add(self.slideVisible);
+        self.slides[0].style.transform = "translate(" + self.slideWidth + ", 0)";
 
         setTimeout(function () {
-          slides[index].style.transform = "translate(-" + slideWidth + ", 0)";
-          slides[0].style.transform = "translate(0, 0)";
+          self.slides[self.index].style.transform = "translate(-" + self.slideWidth + ", 0)";
+          self.slides[0].style.transform = "translate(0, 0)";
         }, 100);
       }
 
     } else { //code for IE9-
-      while (slides[index].className.indexOf(currentSlide) === -1) {
-        index++;
+      while (self.slides[self.index].className.indexOf(self.currentSlide) === -1) {
+        self.index++;
       }
 
-      if (index < slides.length - 1) {
-        slideIe(slides[index], slides[index + 1]);
+      if (self.index < self.total - 1) {
+        self._slideIe(self.slides[self.index], self.slides[self.index + 1]);
       } else {
-        slideIe(slides[index], slides[0]);
+        self._slideIe(self.slides[self.index], self.slides[0]);
       }
     }
-  }
+  },
+
+  //previous button for loop
+  previous: function () {
+    var self = this;
+    self.index = 0;
+
+    if (document.body.classList) {
+
+      while (!self.slides[self.index].classList.contains(self.currentSlide)) {
+        self.index++;
+      }
+
+      if (self.index === 0) {
+        self.slides[self.total - 1].classList.add(self.slideVisible);
+        self.slides[self.total - 1].style.transform = "translate(-" + self.slideWidth + ", 0)";
+
+        setTimeout(function () {
+          self.slides[self.index].style.transform = "translate(" + self.slideWidth + ", 0)";
+          self.slides[self.total - 1].style.transform = "translate(0, 0)";
+        }, 100);
+      } else {
+        self.slides[self.index - 1].classList.add(self.slideVisible);
+        self.slides[self.index - 1].style.transform = "translate(-" + self.slideWidth + ", 0)";
+
+        setTimeout(function () {
+          self.slides[self.index].style.transform = "translate(" + self.slideWidth + ", 0)";
+          self.slides[self.index - 1].style.transform = "translate(0, 0)";
+        }, 100);
+      }
+
+    } else { //code for IE9-
+      //the same func as "next"
+    }
+  },
+
 
   //function for drawing slider animation in IE9-
-  function slideIe(current, nextPrev) {
+  _slideIe: function (current, nextPrev) {
+    var self = this;
+    //function for drawing slider animation in IE9-
     var start = Date.now();
 
     //define "next image block" in slider
-    nextPrev.className += " " + slideVisible;
-    nextPrev.setAttribute("style", "left:" + slideWidth + "px");
+    nextPrev.className += " " + self.slideVisible;
+    nextPrev.setAttribute("style", "left:" + self.slideWidth + "px");
 
     var timer = setInterval(function () {
 
@@ -232,92 +273,58 @@ function Slider(sliderId) {
           nextPrev.style.left = "";
 
           setTimeout(function (){
-            current.className = current.className.replace(" " + currentSlide, "");
+            current.className = current.className.replace(" " + self.currentSlide, "");
             current.style.left = "";
 
             setTimeout(function (){
-              nextPrev.className = nextPrev.className.replace(slideVisible, currentSlide);
+              nextPrev.className = nextPrev.className.replace(self.slideVisible, self.currentSlide);
             },0);
           }, 0);
         }, 0);
       }
-
       // draw animation by passed time
       draw(timePassed, current, nextPrev);
-
     }, 20);
 
     //while timePassed goes from 0 to 2000 images slides
     function draw(timePassed, current, nextPrev) {
-      var step = parseInt(slideWidth) / 2000;
+      var step = parseInt(self.slideWidth) / 2000;
       var counter = timePassed * step;
       current.style.left = "-" + counter + 'px';
-      nextPrev.style.left = (parseInt(slideWidth) - counter) + "px";
+      nextPrev.style.left = (parseInt(self.slideWidth) - counter) + "px";
     }
-  }
+  },
 
 
-  //previous button for loop
-  function previous() {
-    var index = 0;
-
+  _clearStyles: function () {
+    var self = this;
     if (document.body.classList) {
-
-      while (!slides[index].classList.contains(currentSlide)) {
-        index++;
-      }
-
-      if (index === 0) {
-        slides[slides.length - 1].classList.add(slideVisible);
-        slides[slides.length - 1].style.transform = "translate(-" + slideWidth + ", 0)";
-
-        setTimeout(function () {
-          slides[index].style.transform = "translate(" + slideWidth + ", 0)";
-          slides[slides.length - 1].style.transform = "translate(0, 0)";
-        }, 100);
-      } else {
-        slides[index - 1].classList.add(slideVisible);
-        slides[index - 1].style.transform = "translate(-" + slideWidth + ", 0)";
-
-        setTimeout(function () {
-          slides[index].style.transform = "translate(" + slideWidth + ", 0)";
-          slides[index - 1].style.transform = "translate(0, 0)";
-        }, 100);
-      }
-
-    } else { //code for IE9-
-      //the same func as "next"
+      this.slider.addEventListener("transitionend", clearSlides);
     }
-  }
 
+    function clearSlides() {
+      var prevElem = self.slider.getElementsByClassName(self.currentSlide)[0];
+      var current = self.slider.getElementsByClassName(self.slideVisible)[0];
 
-  function clearSlides() {
-    var prevElem = slider.getElementsByClassName(currentSlide)[0];
-    var current = slider.getElementsByClassName(slideVisible)[0];
-
-    if (prevElem && current) {
-      setTimeout(function () {
-        current.classList.add(currentSlide);
-        current.style.transform = "";
-
+      if (prevElem && current) {
         setTimeout(function () {
-          prevElem.classList.remove(currentSlide);
-          current.classList.remove(slideVisible);
-          prevElem.style.transform = "";
+          current.classList.add(self.currentSlide);
+          current.style.transform = "";
+
+          setTimeout(function () {
+            prevElem.classList.remove(self.currentSlide);
+            current.classList.remove(self.slideVisible);
+            prevElem.style.transform = "";
+          }, 0);
         }, 0);
-      }, 0);
+      }
     }
-  }
+  },
+};
 
-  if (document.body.classList) {
-    slider.addEventListener("transitionend", clearSlides);
-  }
+var mainSlider = new Slider("#main-slider", "1200px");
 
-  //loop for slider
-  var timerId = setTimeout(function tick() {
-    next();
-    timerId = setTimeout(tick, 6000);
-  }, 6000);
-}
-
-var mainSlider = new Slider("#main-slider");
+var timerId = setTimeout(function tick() {
+  mainSlider.next();
+  timerId = setTimeout(tick, 6000);
+}, 6000);
