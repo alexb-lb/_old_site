@@ -80,14 +80,16 @@ body {
 .main-header {
   position: relative;
   min-height: 418px;
-  background: url("../images/slide_1.jpg") 0 0 no-repeat;
+  background-color: #d27168; /***/
+  //background: url("../images/slide_1.jpg") 0 0 no-repeat;
 }
 
 /***slider***/
 .main-slider {
   box-sizing: border-box;
   width: 100%;
-  max-height: 418px;
+  height: 418px;
+
   overflow: hidden;
 
   img {
@@ -507,6 +509,7 @@ main{
 
 
 /********=-JS-CLASSES=-*********/
+/*js classes for calculator*/
 .js__error{
   position: absolute;
   left: -220px;
@@ -518,4 +521,21 @@ main{
   z-index: 1;
 }
 
+/*js classes for slider*/
 
+.js__slider-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  transition: all 2s ease-in-out;
+}
+
+.js__slider-image--current{
+  display: block;
+}
+
+.js__slider-image--visible{
+   display: block;
+}

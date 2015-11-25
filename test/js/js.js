@@ -1,6 +1,8 @@
 'use strict';
 
-/*AUTOSUBMIT CALC FORM*/
+/***************/
+/*CALC FORM*/
+/***************/
 function calcutator(formId) {
   var form, profit, defaultValue;
 
@@ -103,10 +105,10 @@ function calcutator(formId) {
     if (target.value === "") {
       target.value = defaultValue;
     } else {
-      return checkStr();
+      return checkNumericStr();
     }
 
-    function checkStr() {
+    function checkNumericStr() {
       /*set attribute that reports, that default value *
        * has been changed by the user and should`n be removed */
       target.setAttribute("data-changedVal", "true");
@@ -127,10 +129,11 @@ function calcutator(formId) {
     /*...some code...*/
   }
 
+  //create error tag
   function createErrorMsg(target, className, msg) {
     var errorTag = document.createElement("div"); //making an error div
     form.appendChild(errorTag);
-    errorTag.className = className;
+    errorTag.className = className;  //not classList!! Not working in ie8
     errorTag.innerHTML = msg;
     errorTag.style.top = target.offsetTop + "px";
 
@@ -144,4 +147,177 @@ function calcutator(formId) {
 calcutator("#calc-form");
 
 
+/***************/
+/*SIMPLE SLIDER*/
+/***************/
+function Slider(sliderId) {
+  var slider, slides, currentSlide, nextSlide, prevSlide, slideWidth, slideVisible;
 
+  /*сlasses can be defined by the arguments*/
+  slider = document.querySelector(sliderId);
+  slider.style.position = "relative"; //definitely positioned
+  slides = slider.children;
+  slideWidth = "1200px";
+  slideVisible = "js__slider-image--visible";
+  currentSlide = "js__slider-image--current";
+  nextSlide = "js__slider-image--next";
+  prevSlide = "js__slider-image--prev";
+
+  //adding classes
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].className += " js__slider-image";
+  }
+  slides[0].className += " " + currentSlide; //not classList!! Not working in ie8
+
+
+  //next button for loop
+  function next() {
+    var index;
+    index = 0;
+
+    if (document.body.classList) { //IE9- check ("document.body.classList")
+
+      while (!slides[index].classList.contains(currentSlide)) {
+        index++;
+      }
+
+      /*animation through transformation to not overload the processor*/
+      if (index < slides.length - 1) {
+        slides[index + 1].classList.add(slideVisible);
+        slides[index + 1].style.transform = "translate(" + slideWidth + ", 0)";
+
+        setTimeout(function () {
+          slides[index].style.transform = "translate(-" + slideWidth + ", 0)";
+          slides[index + 1].style.transform = "translate(0, 0)";
+        }, 100);
+      } else {
+        slides[0].classList.add(slideVisible);
+        slides[0].style.transform = "translate(" + slideWidth + ", 0)";
+
+        setTimeout(function () {
+          slides[index].style.transform = "translate(-" + slideWidth + ", 0)";
+          slides[0].style.transform = "translate(0, 0)";
+        }, 100);
+      }
+
+    } else { //code for IE9-
+      while (slides[index].className.indexOf(currentSlide) === -1) {
+        index++;
+      }
+
+      if (index < slides.length - 1) {
+        slideIe(slides[index], slides[index + 1]);
+      } else {
+        slideIe(slides[index], slides[0]);
+      }
+    }
+  }
+
+  //function for drawing slider animation in IE9-
+  function slideIe(current, nextPrev) {
+    var start = Date.now();
+
+    //define "next image block" in slider
+    nextPrev.className += " " + slideVisible;
+    nextPrev.setAttribute("style", "left:" + slideWidth + "px");
+
+    var timer = setInterval(function () {
+
+      var timePassed = Date.now() - start;
+
+      if (timePassed >= 2000) { //easy to make animation time like input parameter
+        clearInterval(timer); //ends after 2 sec
+
+        setTimeout(function (){
+          nextPrev.style.left = "";
+
+          setTimeout(function (){
+            current.className = current.className.replace(" " + currentSlide, "");
+            current.style.left = "";
+
+            setTimeout(function (){
+              nextPrev.className = nextPrev.className.replace(slideVisible, currentSlide);
+            },0);
+          }, 0);
+        }, 0);
+      }
+
+      // draw animation by passed time
+      draw(timePassed, current, nextPrev);
+
+    }, 20);
+
+    //while timePassed goes from 0 to 2000 images slides
+    function draw(timePassed, current, nextPrev) {
+      var step = parseInt(slideWidth) / 2000;
+      var counter = timePassed * step;
+      current.style.left = "-" + counter + 'px';
+      nextPrev.style.left = (parseInt(slideWidth) - counter) + "px";
+    }
+  }
+
+
+  //previous button for loop
+  function previous() {
+    var index = 0;
+
+    if (document.body.classList) {
+
+      while (!slides[index].classList.contains(currentSlide)) {
+        index++;
+      }
+
+      if (index === 0) {
+        slides[slides.length - 1].classList.add(slideVisible);
+        slides[slides.length - 1].style.transform = "translate(-" + slideWidth + ", 0)";
+
+        setTimeout(function () {
+          slides[index].style.transform = "translate(" + slideWidth + ", 0)";
+          slides[slides.length - 1].style.transform = "translate(0, 0)";
+        }, 100);
+      } else {
+        slides[index - 1].classList.add(slideVisible);
+        slides[index - 1].style.transform = "translate(-" + slideWidth + ", 0)";
+
+        setTimeout(function () {
+          slides[index].style.transform = "translate(" + slideWidth + ", 0)";
+          slides[index - 1].style.transform = "translate(0, 0)";
+        }, 100);
+      }
+
+    } else { //code for IE9-
+      //the same func as "next"
+    }
+  }
+
+
+  function clearSlides() {
+    var prevElem = slider.getElementsByClassName(currentSlide)[0];
+    var current = slider.getElementsByClassName(slideVisible)[0];
+
+    if (prevElem && current) {
+      setTimeout(function () {
+        current.classList.add(currentSlide);
+        current.style.transform = "";
+
+        setTimeout(function () {
+          prevElem.classList.remove(currentSlide);
+          current.classList.remove(slideVisible);
+          prevElem.style.transform = "";
+        }, 0);
+      }, 0);
+    }
+  }
+
+  if (document.body.classList) {
+    slider.addEventListener("transitionend", clearSlides);
+  }
+
+  //loop for slider
+  var timerId = setTimeout(function tick() {
+    next();
+    timerId = setTimeout(tick, 6000);
+  }, 6000);
+}
+
+var mainSlider = new Slider("#main-slider");
