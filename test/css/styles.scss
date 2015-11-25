@@ -216,6 +216,7 @@ body {
   background-color: #F1F2F2;
   background: linear-gradient(#FEFEFE, #F1F2F2);
   overflow: hidden;
+  text-align: right;
 }
 
 .top-nav {
@@ -231,10 +232,18 @@ body {
     display: inline-block;
     vertical-align: top;
 
+    &:first-of-type a {
+      padding-right: 45px;
+
+      &::after {
+        right: 35px;
+      }
+    }
+
     a {
       position: relative;
       display: block;
-      padding: 15px 18px;
+      padding: 15px 30px 15px 0;
       font: 14px/17px $font-family-headers;
       color: $color-contrast-to-light-2;
       text-transform: uppercase;
@@ -246,7 +255,7 @@ body {
 
       &::after {
         position: absolute;
-        right: 7px;
+        right: 20px;
         top: 20px;
         height: 6px;
         width: 4px;

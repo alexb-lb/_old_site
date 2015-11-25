@@ -151,7 +151,8 @@ body {
   box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.5), -2px 0 3px -2px rgba(0, 0, 0, 0.5);
   background-color: #F1F2F2;
   background: linear-gradient(#FEFEFE, #F1F2F2);
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: right; }
 
 .top-nav {
   display: inline-block;
@@ -164,10 +165,14 @@ body {
   .top-nav li {
     display: inline-block;
     vertical-align: top; }
+    .top-nav li:first-of-type a {
+      padding-right: 45px; }
+      .top-nav li:first-of-type a::after {
+        right: 35px; }
     .top-nav li a {
       position: relative;
       display: block;
-      padding: 15px 18px;
+      padding: 15px 30px 15px 0;
       font: 14px/17px "Roboto Condensed";
       color: #6D6E71;
       text-transform: uppercase;
@@ -176,7 +181,7 @@ body {
         color: #d27168; }
       .top-nav li a::after {
         position: absolute;
-        right: 7px;
+        right: 20px;
         top: 20px;
         height: 6px;
         width: 4px;
