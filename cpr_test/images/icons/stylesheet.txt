@@ -1,0 +1,89 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-email_icon {
+    width: 21px;
+    height: 21px;
+    background-position: -1px -1px;
+}
+
+.sprite-fb_icon {
+    width: 17px;
+    height: 17px;
+    background-position: -24px -1px;
+}
+
+.sprite-google_icon {
+    width: 23px;
+    height: 15px;
+    background-position: -43px -1px;
+}
+
+.sprite-image_icon {
+    width: 32px;
+    height: 25px;
+    background-position: -68px -1px;
+}
+
+.sprite-image_icon_hovered {
+    width: 32px;
+    height: 25px;
+    background-position: -102px -1px;
+}
+
+.sprite-info_icon {
+    width: 29px;
+    height: 25px;
+    background-position: -136px -1px;
+}
+
+.sprite-left_arrow_icon {
+    width: 26px;
+    height: 38px;
+    background-position: -167px -1px;
+}
+
+.sprite-left_arrow_icon_mini {
+    width: 36px;
+    height: 36px;
+    background-position: -195px -1px;
+}
+
+.sprite-map_icon {
+    width: 33px;
+    height: 33px;
+    background-position: -233px -1px;
+}
+
+.sprite-phone_icon {
+    width: 21px;
+    height: 21px;
+    background-position: -268px -1px;
+}
+
+.sprite-plan_icon {
+    width: 31px;
+    height: 25px;
+    background-position: -291px -1px;
+}
+
+.sprite-plan_icon_hovered {
+    width: 31px;
+    height: 25px;
+    background-position: -324px -1px;
+}
+
+.sprite-right_arrow_icon {
+    width: 25px;
+    height: 38px;
+    background-position: -357px -1px;
+}
+
+.sprite-right_arrow_icon_mini {
+    width: 36px;
+    height: 36px;
+    background-position: -384px -1px;
+}
