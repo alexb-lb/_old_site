@@ -73,6 +73,10 @@ figure{
   }
 }
 
+.hidden{
+  display: none !important;
+}
+
 /********=-HEADER=-*********/
 .main-header {
   box-sizing: border-box;
@@ -469,7 +473,7 @@ float: left;
 }
 
 /*********=- PLAN GALLERY -=************/
-$transition-speed: 850ms;
+$transition-speed: 600ms;
 
 .plan-box__container {
   float: left;
@@ -501,4 +505,8 @@ $transition-speed: 850ms;
       transform: rotateX(101deg);
     }
   }
+}
+
+.about, .map{
+  min-height: 400px;
 }

@@ -42,6 +42,9 @@ figure {
   .btn-clear:focus {
     outline: none; }
 
+.hidden {
+  display: none !important; }
+
 /********=-HEADER=-*********/
 .main-header {
   box-sizing: border-box;
@@ -358,9 +361,9 @@ main {
 
 .floors-wrapper {
   width: 853px;
-  transition: all 850ms linear; }
+  transition: all 600ms linear; }
   .floors-wrapper .floor {
-    transition: all 850ms linear;
+    transition: all 600ms linear;
     height: 50px;
     perspective: 1000px;
     margin-bottom: 30px; }
@@ -369,7 +372,10 @@ main {
       .floors-wrapper .floor.floor--active img {
         transform: rotateX(0deg); }
     .floors-wrapper .floor img {
-      transition: all 850ms linear;
+      transition: all 600ms linear;
       transform: rotateX(101deg); }
+
+.about, .map {
+  min-height: 400px; }
 
 /*# sourceMappingURL=styles.css.map */

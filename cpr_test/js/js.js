@@ -114,8 +114,6 @@ $(document).ajaxComplete(function () {
 });
 
 
-
-
 /************* PLAN GALLERY **************/
 function FloorGallery(elem) {
   this.gallery = document.querySelector(elem);
@@ -151,9 +149,9 @@ FloorGallery.prototype = {
   },
 
   //проверка, идет ли анимация
-  isAnimationEnd: function (){
+  isAnimationEnd: function () {
     var self = this;
-    self.wrapper.addEventListener("transitionend", function (){
+    self.wrapper.addEventListener("transitionend", function () {
       self._animationEnd = true;
     });
   },
@@ -172,7 +170,7 @@ FloorGallery.prototype = {
         //вычисляет, клик сделан на миниатюре или просто во враппере со миниатюрами
         while (target !== this) {
           if (target.classList.contains("thumb")) { // *** логическое && приводит к багам, разобраться, почему
-            if(!target.classList.contains("active")) self.changeImage(target);
+            if (!target.classList.contains("active")) self.changeImage(target);
             return;
           }
         }
@@ -189,11 +187,13 @@ FloorGallery.prototype = {
     //удаление предыдущих активных класса
     for (var i = 0; i < self.thumbs.length; i++) {
       self.thumbs[i].classList.remove("active");
-    };
+    }
+    ;
     for (var y = 0; y < self.floorImages.length; y++) {
       self.floorImages[y].classList.remove("floor--active");
       self.floorImages[y].style.transform = "";
-    };
+    }
+    ;
 
     // I первый этап анимации, центрирование слоев
     self.wrapper.style.transform = "translate(0, -190px)"; // можно подбирать высоту на основе border-box элементов
@@ -201,18 +201,18 @@ FloorGallery.prototype = {
     // проверка, идет ли анимация в данный момент
     checkAnimationEnd();
 
-    function checkAnimationEnd(){
-      if(self._animationEnd){
+    function checkAnimationEnd() {
+      if (self._animationEnd) {
         magicBicycle(); //как только анимация закончена, старт второго этапа
-      } else{
-        setTimeout(function (){
+      } else {
+        setTimeout(function () {
           checkAnimationEnd();
         }, 50);
       }
     };
 
     // II этап анимации - вытеснение слоев активным изображением
-    function magicBicycle(){
+    function magicBicycle() {
       // активный класс для миниатюр слоев и  активный класс по индексу соответственно индекса ссылки
       for (index; index < self.thumbs.length; index++) {
         if (target === self.thumbs[index]) {
@@ -220,11 +220,12 @@ FloorGallery.prototype = {
           self.floorImages[index].classList.add("floor--active");
           break;
         }
-      };
+      }
+      ;
 
       //создает эффект вытеснения слоев вверх активным изображением
       var pushUpperImg = 300;
-      for(var i = index-1; i >= 0; i--){
+      for (var i = index - 1; i >= 0; i--) {
         self.floorImages[i].style.transform = "translate(0, -" + pushUpperImg + "px)";
         pushUpperImg += 80;
       }
@@ -248,6 +249,68 @@ $(document).ajaxComplete(function () {
   var planGallery = new FloorGallery(".plan-box");
 });
 
+
+/************* изменение контента по клику на пункт меню (без ajax) **********/
+function changePageContent(wrapper) {
+  var container = document.querySelector(wrapper);
+  var contentNav = container.querySelector(".content-nav");
+  var contentHeaders = contentNav.children;
+  var contentBlocks = container.querySelectorAll("[data-content]");
+
+  if (contentNav) clickHandler(); //если это вообще нужная страница открыта
+
+  function clickHandler(){
+    console.log("working");
+    contentNav.addEventListener("click", function (e) {
+      e.preventDefault();
+      identifyTarget(e.target.parentNode);
+    });
+  }
+
+  // передача нужных названий элементов в основную функцию в зависимости от того, на каком элементе был клик
+  function identifyTarget(target){
+    switch (target.getAttribute("data-content-header")){
+      case "about":
+        changeContent("about", target);
+        break;
+      case "gallery":
+        changeContent("gallery", target);
+        break;
+      case "plan":
+        changeContent("plan", target);
+        break;
+      case "map":
+        changeContent("map", target);
+        break;
+      default :
+        break;
+    }
+  }
+
+  //основная функция подмены контента без перезагрузки страницы (как табы)
+  function changeContent(content, target){
+    //удаление активных классов с текущего пункта меню
+    for(var i = 0; i < contentHeaders.length; i++){
+      if(contentHeaders[i].classList.contains("active"))
+      contentHeaders[i].classList.remove("active");
+    }
+    target.classList.add("active"); //добавление на новый пункт меню
+
+    for(var y = 0; y < contentBlocks.length; y++){
+      if(contentBlocks[y].getAttribute("data-content") === content){
+        contentBlocks[y].classList.remove("hidden")
+      } else {
+        contentBlocks[y].classList.add("hidden");
+      }
+    }
+  }
+};
+
+changePageContent(".page-content");
+
+$(document).ajaxComplete(function () {
+  changePageContent(".page-content");
+});
 
 
 /********* FancyBox ***********/
@@ -286,17 +349,14 @@ $(document).on("click", ".fancy-gal", function () {
 /********* AJAX requests **********/
 
 $("body").on("click", ".page-next", function (e) {
-  if(isFirstLoad) {
-    e.preventDefault();
-    $.ajax({
-      url: "html/page2.html",
-      cache: false,
-      success: function (html) {
-        $("main").replaceWith(html);
-        isFirstLoad = false;
-      }
-    })
-  }
+  e.preventDefault();
+  $.ajax({
+    url: "html/page2.html",
+    cache: false,
+    success: function (html) {
+      $("main").replaceWith(html);
+    }
+  })
 });
 
 $("body").on("click", ".page-prev", function (e) {
@@ -307,28 +367,6 @@ $("body").on("click", ".page-prev", function (e) {
     cache: false,
     success: function (html) {
       $("main").replaceWith(html);
-    }
-  })
-});
-
-$("body").on("click", ".project-plan ", function (e) {
-  e.preventDefault();
-
-  $.ajax({
-    url: "html/plan.html",
-    success: function (html) {
-      $(".page-content").replaceWith(html);
-    }
-  })
-});
-
-$("body").on("click", ".project-gallery ", function (e) {
-  e.preventDefault();
-
-  $.ajax({
-    url: "html/gallery.html",
-    success: function (html) {
-      $(".page-content").replaceWith(html);
     }
   })
 });

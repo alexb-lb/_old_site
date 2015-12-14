@@ -50,14 +50,19 @@
   <div class="page-content content-box">
     <nav>
       <ul class="list-clear content-nav">
-        <li class="project-about"><a href="#">о проекте</a></li>
-        <li class="project-gallery active"><a href="html/gallery.html">Галерея</a></li>
-        <li class="project-plan "><a href="html/plan.html">план</a></li>
-        <li class="project-map"><a href="#">на карте</a></li>
+        <li class="project-about" data-content-header="about"><a href="html/about.html">о проекте</a></li>
+        <li class="project-gallery active" data-content-header="gallery"><a href="html/gallery.html">Галерея</a></li>
+        <li class="project-plan" data-content-header="plan"><a href="html/plan.html">план</a></li>
+        <li class="project-map" data-content-header="map"><a href="html/map.html">на карте</a></li>
       </ul>
     </nav>
 
-    <div class="gallery">
+    <!--about content starts-->
+    <div class="about hidden" data-content="about">about page</div>
+    <!--about content starts-->
+
+    <!--gallery content starts-->
+    <div class="gallery" data-content="gallery">
 
       <div class="slider">
         <div class="slides-wrapper">
@@ -80,6 +85,50 @@
         <img class="current-img" src="images/full_house_2.jpg" alt="house 2"/>
       </div>
     </div>
+    <!--gallery content ends-->
+
+<!--plan content starts-->
+    <div class="plan-box hidden" data-content="plan">
+      <div class="plan-box__thumbs">
+        <a class="thumb active" href="images/floor.png">5 этаж</a>
+        <a class="thumb" href="images/floor.png">4 этаж</a>
+        <a class="thumb" href="images/floor.png">3 этаж</a>
+        <a class="thumb" href="images/floor.png">2 этаж</a>
+        <a class="thumb" href="images/floor.png">1 этаж</a>
+      </div>
+
+      <div class="plan-box__container">
+        <div class="floors-wrapper">
+
+          <figure class="floor">
+            <img src="images/floor.png" alt="5th floor"/>
+          </figure>
+
+          <figure class="floor">
+            <img src="images/floor.png" alt="4th floor"/>
+          </figure>
+
+          <figure class="floor">
+            <img src="images/floor.png" alt="3th floor"/>
+          </figure>
+
+          <figure class="floor">
+            <img src="images/floor.png" alt="2th floor"/>
+          </figure>
+
+          <figure class="floor">
+            <img src="images/floor.png" alt="1th floor"/>
+          </figure>
+
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--plan content ends-->
+
+    <!--map content starts-->
+    <div class="map hidden" data-content="map">map page</div>
+    <!--map content ends-->
   </div>
 
 </main>
