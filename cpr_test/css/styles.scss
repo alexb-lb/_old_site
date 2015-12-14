@@ -107,10 +107,15 @@ figure{
 
 .main-nav {
   position: relative;
-  margin: 0 16%;
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 750px;
+  margin: auto;
+  padding-left: 10px;
   text-align: center;
   background: #ededee;
   box-shadow: 1px 1px 23px 0 rgba(84, 41, 41, 0.15);
+  font-size: 0;
 
   &:before {
     content: '';
@@ -124,7 +129,8 @@ figure{
 
   li {
     display: inline-block;
-    padding: 0 3%;
+    margin: 0 26px;
+    vertical-align: top;
   }
 
   a {
@@ -223,11 +229,11 @@ main {
 }
 
 .project-gallery a:before {
-  background: url("../images/spritesheet.png") -102px 100% no-repeat;
+  background: url("../images/spritesheet.png") -101px 100% no-repeat;
 }
 
 .project-gallery:hover a:before, .project-gallery.active a:before {
-  background: url("../images/spritesheet.png") -67.5px 100% no-repeat;
+  background: url("../images/spritesheet.png") -67px 100% no-repeat;
 }
 
 .project-plan a:before {

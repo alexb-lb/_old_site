@@ -282,17 +282,21 @@ $(document).on("click", ".fancy-gal", function () {
   });
 });
 
-/********* AJAX requests **********/
-$("body").on("click", ".page-next", function (e) {
-  e.preventDefault();
 
-  $.ajax({
-    url: "html/page2.html",
-    cache: false,
-    success: function (html) {
-      $("main").replaceWith(html);
-    }
-  })
+/********* AJAX requests **********/
+
+$("body").on("click", ".page-next", function (e) {
+  if(isFirstLoad) {
+    e.preventDefault();
+    $.ajax({
+      url: "html/page2.html",
+      cache: false,
+      success: function (html) {
+        $("main").replaceWith(html);
+        isFirstLoad = false;
+      }
+    })
+  }
 });
 
 $("body").on("click", ".page-prev", function (e) {
