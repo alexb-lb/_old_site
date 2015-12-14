@@ -4,7 +4,7 @@
 function Slider(elem) {
   this.gallery = document.querySelector(elem);
   this.slider = document.querySelector(".slider");
-  this.init();
+  if (this.gallery) this.init();
 }
 
 Slider.prototype = {
@@ -14,14 +14,14 @@ Slider.prototype = {
     this.index = 1;
     this._animationEnd = true;
 
-    //������� ������� � ��������� ��� ���������� ���������
+    //раздача классов и атрибутов для управления слайдером
     this.controlData();
-    //����������� �������: �� ����� � �� ��������� ��������
+    //обработчики событий: по клику и по окончанию анимации
     this.clickHandler();
     this.cleanDOM();
   },
 
-  //����� �������� ��� ���������
+  //задаю контроль над слайдером
   controlData: function () {
     this.slides[this.index].classList.contains("active") ?
       true : this.slides[this.index].classList.add("active");
@@ -37,7 +37,7 @@ Slider.prototype = {
     this.gallery.querySelector(".slide-next").setAttribute("data-slide", "next");
   },
 
-  //������ DOM �� ������ ��������� �� ��������� ��������
+  //чистка DOM от лишних элементов по окончанию анимации
   cleanDOM: function () {
     var self = this;
 
@@ -56,10 +56,10 @@ Slider.prototype = {
     });
   },
 
-  //��������� ������
+  //прослушка кликов
   clickHandler: function () {
     var self = this;
-    //����� ���������� ������ ������ ���������, ����� �� ��������
+    //вешаю обработчик кликов навесь контейнер, отлов по всплытию
     this.gallery.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -78,7 +78,7 @@ Slider.prototype = {
     })
   },
 
-  //������ "�����"
+  //кнопка "назад"
   prev: function () {
     var lastElem = this.slides[this.slides.length - 1];
     var lastElemCopy = lastElem.cloneNode(true);
@@ -94,7 +94,7 @@ Slider.prototype = {
     this._animationEnd = false;
   },
 
-  //������ "������"
+  //кнопка "вперед"
   next: function () {
     var prevElem = this.slides[0];
     var prevElemCopy = prevElem.cloneNode(true);
@@ -109,17 +109,152 @@ Slider.prototype = {
 
 var galSlider = new Slider(".gallery");
 
-$(document).ajaxComplete(function (){
+$(document).ajaxComplete(function () {
   var galSlider = new Slider(".gallery");
 });
 
 
 
+
+/************* PLAN GALLERY **************/
+function FloorGallery(elem) {
+  this.gallery = document.querySelector(elem);
+  if (this.gallery) this.init();
+};
+
+FloorGallery.prototype = {
+
+  init: function () {
+    this.wrapper = this.gallery.querySelector(".floors-wrapper");
+    this.floorImages = this.wrapper.children;
+    this.thumbsWrapper = this.gallery.querySelector(".plan-box__thumbs");
+    this.thumbs = this.thumbsWrapper.children;
+    this._animationEnd = true;
+
+    //проверка соответствия количества миниатюр с количеством изображений в галерее этажей
+    this.checkImgCount();
+    //обработка кликов по этажам
+    this.clickHandler();
+    //проверка окончания очередного этапа анимации
+    this.isAnimationEnd();
+
+    //проверка, открыто ли первое изображение при загрузке страницы
+    if (!this.floorImages[0].classList.contains("floor--active")) {
+      this.floorImages[0].classList.add("floor--active");
+    }
+  },
+
+  //проверка соответствия количества миниатюр с количеством изображений в галерее этажей
+  checkImgCount: function () {
+    if (this.thumbs.length !== this.floorImages.length)
+      alert("Внимание! Количество миниатюр не равно количеству изображений этажей, возможны ошибки в отображении");
+  },
+
+  //проверка, идет ли анимация
+  isAnimationEnd: function (){
+    var self = this;
+    self.wrapper.addEventListener("transitionend", function (){
+      self._animationEnd = true;
+    });
+  },
+
+  //обработчик кликов
+  clickHandler: function () {
+    var self = this;
+
+    self.thumbsWrapper.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      //если анимация перехода завершена, начинает работать хендлер
+      if (self._animationEnd) {
+        var target = e.target;
+
+        //вычисляет, клик сделан на миниатюре или просто во враппере со миниатюрами
+        while (target !== this) {
+          if (target.classList.contains("thumb")) { // *** логическое && приводит к багам, разобраться, почему
+            if(!target.classList.contains("active")) self.changeImage(target);
+            return;
+          }
+        }
+      }
+    });
+  },
+
+  // раздача классов для управления анимациями
+  changeImage: function (target) {
+    var self = this;
+    var index = 0;
+    self._animationEnd = false;
+
+    //удаление предыдущих активных класса
+    for (var i = 0; i < self.thumbs.length; i++) {
+      self.thumbs[i].classList.remove("active");
+    };
+    for (var y = 0; y < self.floorImages.length; y++) {
+      self.floorImages[y].classList.remove("floor--active");
+      self.floorImages[y].style.transform = "";
+    };
+
+    // I первый этап анимации, центрирование слоев
+    self.wrapper.style.transform = "translate(0, -190px)"; // можно подбирать высоту на основе border-box элементов
+
+    // проверка, идет ли анимация в данный момент
+    checkAnimationEnd();
+
+    function checkAnimationEnd(){
+      if(self._animationEnd){
+        magicBicycle(); //как только анимация закончена, старт второго этапа
+      } else{
+        setTimeout(function (){
+          checkAnimationEnd();
+        }, 50);
+      }
+    };
+
+    // II этап анимации - вытеснение слоев активным изображением
+    function magicBicycle(){
+      // активный класс для миниатюр слоев и  активный класс по индексу соответственно индекса ссылки
+      for (index; index < self.thumbs.length; index++) {
+        if (target === self.thumbs[index]) {
+          target.classList.add("active");
+          self.floorImages[index].classList.add("floor--active");
+          break;
+        }
+      };
+
+      //создает эффект вытеснения слоев вверх активным изображением
+      var pushUpperImg = 300;
+      for(var i = index-1; i >= 0; i--){
+        self.floorImages[i].style.transform = "translate(0, -" + pushUpperImg + "px)";
+        pushUpperImg += 80;
+      }
+
+      //двигает по оси Y контейнер с изображениями, что бы активное изображение встало по центру контейнера
+      var offsetTop = 80; // height + margin + padding слоев в свернутом состоянии (.floor)
+      if (index === 0) {
+        self.wrapper.style.transform = "translate(0, 0)";
+      } else {
+        offsetTop = offsetTop * index;
+        self.wrapper.style.transform = "translate(0, -" + offsetTop + "px)";
+      }
+    }
+
+  },
+};
+
+var planGallery = new FloorGallery(".plan-box");
+
+$(document).ajaxComplete(function () {
+  var planGallery = new FloorGallery(".plan-box");
+});
+
+
+
 /********* FancyBox ***********/
-//������ FancyGallery �� ����� �� �������
+//запуск FancyGallery по клику на элемент
 $(document).on("click", ".fancy-gal", function () {
 
-  //����������� ������� �������
+  // сборка галереи
   var fancyGallery = [];
   $(".slides-wrapper a").each(function () {
     var href = $(this).attr("href");
@@ -147,27 +282,49 @@ $(document).on("click", ".fancy-gal", function () {
   });
 });
 
-/********* AJAX request **********/
-$("body").on("click", ".page-next", function (e){
+/********* AJAX requests **********/
+$("body").on("click", ".page-next", function (e) {
   e.preventDefault();
 
   $.ajax({
     url: "html/page2.html",
     cache: false,
-    success: function(html){
+    success: function (html) {
       $("main").replaceWith(html);
     }
   })
 });
 
-$("body").on("click", ".page-prev",  function (e){
+$("body").on("click", ".page-prev", function (e) {
   e.preventDefault();
 
   $.ajax({
     url: "html/page1.html",
     cache: false,
-    success: function(html){
+    success: function (html) {
       $("main").replaceWith(html);
+    }
+  })
+});
+
+$("body").on("click", ".project-plan ", function (e) {
+  e.preventDefault();
+
+  $.ajax({
+    url: "html/plan.html",
+    success: function (html) {
+      $(".page-content").replaceWith(html);
+    }
+  })
+});
+
+$("body").on("click", ".project-gallery ", function (e) {
+  e.preventDefault();
+
+  $.ajax({
+    url: "html/gallery.html",
+    success: function (html) {
+      $(".page-content").replaceWith(html);
     }
   })
 });

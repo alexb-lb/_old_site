@@ -2,12 +2,12 @@
 
 /****units****/
 $margin-both-sides: 170px;
-$content-width: 950px;
+$content-width: 960px;
 
 /****media-queries****/
 $media-xs: 400px;
 $media-sm: 600px;
-$media-m: 950px;
+$media-m: 960px;
 $media-l: 1100px;
 
 /****font styles****/
@@ -29,6 +29,11 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 15px;
   color: $color__base;
+}
+
+figure{
+  margin: 0;
+  padding: 0;
 }
 
 .content-box {
@@ -222,7 +227,7 @@ main {
 }
 
 .project-gallery:hover a:before, .project-gallery.active a:before {
-  background: url("../images/spritesheet.png") -68px 100% no-repeat;
+  background: url("../images/spritesheet.png") -67.5px 100% no-repeat;
 }
 
 .project-plan a:before {
@@ -341,6 +346,37 @@ main {
   }
 }
 
+
+/********=- PLAN BLOCK -=*********/
+.plan-box{
+  margin-top: 45px;
+  width: $content-width;
+}
+
+.plan-box__thumbs{
+float: left;
+  width: 107px;
+  padding-top: 80px;
+
+  .thumb{
+    display: inline-block;
+    margin-bottom: 34px;
+    padding-top: 25px;
+    padding-left: 6px;
+    min-width: 70px;
+    overflow: hidden;
+    font: bold 16px/16px "Open Sans";
+    text-transform: uppercase;
+    color: #6c6d6f;
+    background: url("../images/floor-icon.png") 0 0 no-repeat;
+    cursor: pointer;
+
+    &:hover, &.active {
+      color: $color__hovered;
+    }
+  }
+}
+
 /********=- FOOTER -=*********/
 .main-footer {
   padding: 30px 1px 1px 1px;
@@ -426,3 +462,37 @@ main {
   color: #fff;
 }
 
+/*********=- PLAN GALLERY -=************/
+$transition-speed: 850ms;
+
+.plan-box__container {
+  float: left;
+  width: 853px;
+  height: 570px;
+  overflow: hidden ;
+}
+
+.floors-wrapper{
+  width: 853px;
+  transition: all $transition-speed linear;
+
+  .floor {
+    transition: all $transition-speed linear;
+    height: 50px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+
+    &.floor--active{
+      height: 570px;
+
+      img {
+        transform: rotateX(0deg);
+      }
+    }
+
+    img {
+      transition: all $transition-speed linear;
+      transform: rotateX(101deg);
+    }
+  }
+}

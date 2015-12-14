@@ -6,14 +6,18 @@
 /********=-GENERAL STYLES=-*********/
 body {
   width: 100%;
-  min-width: 950px;
+  min-width: 960px;
   background-color: #f9f9f9;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 15px;
   color: #808080; }
 
+figure {
+  margin: 0;
+  padding: 0; }
+
 .content-box {
-  max-width: 950px;
+  max-width: 960px;
   margin: auto; }
 
 .clearfix {
@@ -158,7 +162,7 @@ main {
   background: url("../images/spritesheet.png") -102px 100% no-repeat; }
 
 .project-gallery:hover a:before, .project-gallery.active a:before {
-  background: url("../images/spritesheet.png") -68px 100% no-repeat; }
+  background: url("../images/spritesheet.png") -67.5px 100% no-repeat; }
 
 .project-plan a:before {
   background: url("../images/spritesheet.png") -291px 100% no-repeat; }
@@ -245,6 +249,30 @@ main {
   .img-box img {
     width: 579px; }
 
+/********=- PLAN BLOCK -=*********/
+.plan-box {
+  margin-top: 45px;
+  width: 960px; }
+
+.plan-box__thumbs {
+  float: left;
+  width: 107px;
+  padding-top: 80px; }
+  .plan-box__thumbs .thumb {
+    display: inline-block;
+    margin-bottom: 34px;
+    padding-top: 25px;
+    padding-left: 6px;
+    min-width: 70px;
+    overflow: hidden;
+    font: bold 16px/16px "Open Sans";
+    text-transform: uppercase;
+    color: #6c6d6f;
+    background: url("../images/floor-icon.png") 0 0 no-repeat;
+    cursor: pointer; }
+    .plan-box__thumbs .thumb:hover, .plan-box__thumbs .thumb.active {
+      color: #d82d33; }
+
 /********=- FOOTER -=*********/
 .main-footer {
   padding: 30px 1px 1px 1px;
@@ -314,5 +342,28 @@ main {
   text-align: center;
   text-transform: uppercase;
   color: #fff; }
+
+/*********=- PLAN GALLERY -=************/
+.plan-box__container {
+  float: left;
+  width: 853px;
+  height: 570px;
+  overflow: hidden; }
+
+.floors-wrapper {
+  width: 853px;
+  transition: all 850ms linear; }
+  .floors-wrapper .floor {
+    transition: all 850ms linear;
+    height: 50px;
+    perspective: 1000px;
+    margin-bottom: 30px; }
+    .floors-wrapper .floor.floor--active {
+      height: 570px; }
+      .floors-wrapper .floor.floor--active img {
+        transform: rotateX(0deg); }
+    .floors-wrapper .floor img {
+      transition: all 850ms linear;
+      transform: rotateX(101deg); }
 
 /*# sourceMappingURL=styles.css.map */
