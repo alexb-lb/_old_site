@@ -102,8 +102,7 @@ body {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  background-color: #424242;
-  background: url(../images/main_bg_925_h.jpg) 50% -100px no-repeat fixed; }
+  background-color: #424242; }
   @media (min-width: 760px) {
     .main-header {
       -webkit-box-pack: justify;
