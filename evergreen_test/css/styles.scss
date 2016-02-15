@@ -1,0 +1,549 @@
+/*** all class names was given to avoid conflicts in future support ***/
+
+/********=-VARIABLES=-*********/
+/****units****/
+$width-fixed: 1200px;
+$container-padding-left: 79px;
+$container-padding-right: 119px;
+
+/****font styles****/
+$font-family-base: "Roboto";
+$font-family-headers: 'Roboto Condensed';
+$font-size-base: 14px;
+
+$color-contrast-base: #fff;
+
+$color-contrast-to-light-base: #25383F;
+$color-contrast-to-light-2: #6D6E71;
+$color-contrast-to-light-3: #4D4545;
+$color-contrast-to-light-4: #A7A9AC;
+$color-contrast-to-light-5: #C49A6C;
+$color-contrast-to-light-6: #d27168;
+$color-contrast-to-light-7: #000000;
+
+/********=-GENERAL STYLES=-*********/
+body {
+  font-family: $font-family-base, "Arial", sans-serif;
+  font-size: $font-size-base;
+  background-color: #f9ffdb;
+}
+
+.width-fixed {
+  width: $width-fixed;
+  margin: auto;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.clear-block {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.h1-style {
+  font: 60px/60px $font-family-headers;
+  color: $color-contrast-base;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.h2-style{
+  @extend .h1-style;
+  font: 42px/48px $font-family-headers;
+  color: $color-contrast-to-light-base;
+}
+
+.h3-style{
+  @extend .h1-style;
+  font: 36px/36px $font-family-headers;
+  color: $color-contrast-to-light-base;
+  text-align: center;
+}
+
+.h4-style {
+  @extend .h1-style;
+  font: 25px/25px $font-family-headers;
+  color: $color-contrast-to-light-3;
+  margin: 0 0 2px 0;
+}
+
+
+/********=-HEADER=-*********/
+.main-header {
+  position: relative;
+  min-height: 418px;
+  background: url("../images/slide_1.jpg") 0 0 no-repeat;
+}
+
+/***slider***/
+.main-slider {
+  box-sizing: border-box;
+  width: 100%;
+  height: 418px;
+
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+/*** base navigation styles ***/
+.nav-container {
+  position: absolute;
+  top: 45px;
+  left: $container-padding-left;
+  right: $container-padding-right;
+}
+
+/*** under-top nav block ***/
+.logo-lang-container {
+  min-height: 48px;
+  margin-bottom: 7px;
+
+}
+
+/*** logo ***/
+.logo {
+  display: inline-block;
+  font: 50px/60px $font-family-headers;
+  text-transform: uppercase;
+  color: $color-contrast-base;
+
+  a {
+    font: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    max-height: 60px;
+  }
+}
+
+.support-nav {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 700px;
+  margin: 20px 50px 0 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin-right: 45px;
+    vertical-align: top;
+
+    a {
+      font: 11px/13px $font-family-base;
+      font-weight: 300;
+      color: $color-contrast-base;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover{
+        color: $color-contrast-to-light-7;
+      }
+    }
+  }
+}
+
+/*** lang toggle ***/
+.lang-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.lang-current {
+  display: block;
+  position: relative;
+  border: 1px solid $color-contrast-base;
+  padding: 1px 19px 1px 6px;
+  font: 14px/17px $font-family-headers;
+  color: $color-contrast-base;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    top: 8px;
+    width: 6px;
+    height: 5px;
+    background: url("../images/arrow_1.png") 0 0 no-repeat;
+    background-size: contain;
+  }
+
+  &:hover + .lang-toggle {
+    display: block;
+  }
+}
+
+.lang-toggle {
+  @extend .lang-current;
+  display: none;
+  position: absolute;
+  //border-top: none;
+  z-index: 1;
+
+  &:hover {
+    display: block;
+  }
+}
+
+/*** main top navigation ***/
+.nav-basket-container {
+  border: 1px solid #F1F2F2;
+  box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.5),
+  -2px 0 3px -2px rgba(0, 0, 0, 0.5);
+  background-color: #F1F2F2;
+  background: linear-gradient(#FEFEFE, #F1F2F2);
+  overflow: hidden;
+  text-align: right;
+}
+
+.top-nav {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0;
+  padding-left: 40px;
+  list-style: none;
+  vertical-align: top;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+
+    &:first-of-type a {
+      padding-right: 45px;
+
+      &::after {
+        right: 35px;
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      padding: 15px 30px 15px 0;
+      font: 14px/17px $font-family-headers;
+      color: $color-contrast-to-light-2;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover{
+        color: $color-contrast-to-light-6;
+      }
+
+      &::after {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        height: 6px;
+        width: 4px;
+        content: "";
+        background: url("../images/right-arrow.png") 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+/*** basket ***/
+.basket {
+  position: relative;
+  display: inline-block;
+  width: 188px;
+  padding: 15px 0;
+  font: 14px/17px $font-family-headers;
+  color: $color-contrast-base;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #737538;
+  background: linear-gradient(#52A828, #755B1E);
+  cursor: pointer;
+
+  &:hover{
+    color: $color-contrast-to-light-7;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 36px;
+    top: 12px;
+    width: 23px;
+    height: 23px;
+    background: url("../images/busket-img.png") 0 0 no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+}
+
+/********=-MAIN=-*********/
+$main-container-width: 692px;
+
+main{
+  position: relative;
+  box-sizing: border-box;
+  background-color: #F1F2F2;
+  background: url("../images/bg_wheat.jpg") $main-container-width 100% repeat-y;
+}
+
+/*info container*/
+.main-info-container {
+  position: relative;
+  box-sizing: border-box;
+  width: $main-container-width;
+  padding-left: $container-padding-left;
+  background-color: #F1F2F2;
+  background: url("../images/pattern.png");
+
+  .header{
+    width: 100%;
+    position: absolute;
+    top: -195px;
+  }
+}
+
+.info-wrapper{
+  padding: 1px;
+}
+
+.h1--padding-1 {
+  margin-left: 93px;
+}
+
+.h1--padding-2 {
+  margin-left: 203px;
+}
+
+.h1--padding-3 {
+  margin-left: 256px;
+}
+
+.info__text-container{
+  width: 375px;
+  word-wrap: break-word;
+}
+
+/*infoblock in info container*/
+.infoblock{
+  position: relative;
+  padding-left: 58px;
+  margin: 12px 0 22px 0;
+  word-wrap: break-word;
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 34px;
+    height: 32px;
+    background: url("../images/star.png");
+  }
+}
+
+.infoblock__description{
+  font: normal 11px/12.5px $font-family-base;
+  color: $color-contrast-to-light-4;
+  margin-bottom: 3px;
+}
+
+.infoblock__percentage{
+  font: normal 25px/25px $font-family-base;
+  color: $color-contrast-to-light-5;
+}
+
+/*image block for info container*/
+.info__img{
+  width: 190px;
+  margin: -75px 25px 0 0;
+  padding: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+/*info promo block under main info block*/
+.info__promo{
+  padding: 20px 0;
+}
+
+.promo-button{
+  display: inline-block;
+  margin: 30px 0 0 10px;
+  padding: 13px 18px 13px 27px;
+  border: 5px solid $color-contrast-to-light-7;
+  font: 23px/28px $font-family-headers;
+  text-transform: uppercase;
+  color: $color-contrast-to-light-7;
+  text-decoration: none;
+
+  &:hover{
+    border: 5px solid $color-contrast-to-light-6;
+    color: $color-contrast-to-light-6;
+  }
+}
+
+.promo-description{
+  @extend .info__img;
+  margin: 0 25px 0 0;
+  text-align: right;
+}
+
+
+/*calculator container*/
+.calc-container {
+  box-sizing: border-box;
+  margin-top: -185px;
+  z-index: 1;
+  padding-right: $container-padding-right;
+
+}
+
+.calc-wrapper{
+  padding: 12px;
+  background-color: #E9E5E4;
+}
+
+.calc{
+  border: 1px dashed #A7A9AC;
+  background: url("../images/pattern.png");
+  max-width: 249px;  /***/
+  padding: 22px;
+  padding-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.calc-promo{
+  margin-top: 20px;
+  font: 14px/18px $font-family-base;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $color-contrast-to-light-base;
+  text-align: center;
+}
+
+/*calc form container*/
+.calc-form{
+  position: relative;
+  margin-top: 20px;
+  padding: 22px 0 4px 0;
+  box-shadow: 0 -40px 0 -39px #D1D3D4;
+}
+
+.calc-form__text{
+  position: relative;
+  display: block;
+  margin-top: 15px;
+  font: 14px/18px $font-family-base;
+  font-weight: 300;
+  color: $color-contrast-to-light-base;
+
+  &:first-of-type{
+    margin-top: 0;
+  }
+}
+
+.calc-form__field{
+  box-sizing: border-box;
+  margin-top: 6px;
+  display: block;
+  width: 100%;
+  border: 1px solid #D1D3D4;
+  padding: 4px 9px;
+  font: 14px/18px $font-family-base;
+  color: $color-contrast-to-light-4;
+
+  &:focus{
+    color: $color-contrast-to-light-base;
+  }
+}
+
+.profit-block{
+  margin-top: 15px;
+  box-shadow: 0 -40px 0 -39px #D1D3D4;
+  padding: 8px 0 0 0;
+}
+
+.profit-text{
+  display: block;
+  font: 14px/18px $font-family-base;
+  font-weight: 300;
+  color: $color-contrast-to-light-6;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.profit{
+  display: inline-block;
+  max-width: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font: 47px/47px $font-family-headers;
+  color: $color-contrast-to-light-6;
+  text-align: center;
+}
+
+.currency{
+  margin-top: -5px;
+  font: 14px/18px $font-family-base;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+/********=-JS-CLASSES=-*********/
+/*js classes for calculator*/
+.js__error{
+  position: absolute;
+  left: -220px;
+  width: 200px;
+  border: 1px solid $color-contrast-to-light-6;
+  background: $color-contrast-to-light-6;
+  color: #fff;
+  padding: 4px;
+  z-index: 1;
+}
+
+/*js classes for slider*/
+
+.js__slider-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  transition: all 2s ease-in-out;
+}
+
+.js__slider-image--current{
+  display: block;
+}
+
+.js__slider-image--visible{
+   display: block;
+}
