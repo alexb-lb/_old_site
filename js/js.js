@@ -156,34 +156,34 @@ function gallery() {
 
 
 /*change href, to delete anchor links*/
-window.addEventListener('DOMContentLoaded', changeHref);
-
-function changeHref() {
-    var loc = location.href;
-
-    if (loc.indexOf("#") !== -1) {
-        var newHrefEnds;
-
-        /*дополнительный слеш перед хэшем пришлось добавить, что бы IE правильно отображал переходы*/
-        if(loc.indexOf("/#") !== -1){
-            newHrefEnds = loc.indexOf("/#");
-        } else {
-            newHrefEnds = loc.indexOf("#")
-        }
-
-        var newHref = loc.slice(0, newHrefEnds);
-        setTimeout(function () {
-            history.replaceState(null, null, newHref);
-        }, 0);
-
-        /*for IE10-IE11*/
-        var anchor = document.getElementById('article-anchor');
-        var anchorTop = anchor.getBoundingClientRect().top;
-        if(anchorTop > 20){
-            window.scrollBy(0, anchorTop);
-        }
-    }
-}
+//window.addEventListener('DOMContentLoaded', changeHref);
+//
+//function changeHref() {
+//    var loc = location.href;
+//
+//    if (loc.indexOf("#") !== -1) {
+//        var newHrefEnds;
+//
+//        /*дополнительный слеш перед хэшем пришлось добавить, что бы IE правильно отображал переходы*/
+//        if(loc.indexOf("/#") !== -1){
+//            newHrefEnds = loc.indexOf("/#");
+//        } else {
+//            newHrefEnds = loc.indexOf("#")
+//        }
+//
+//        var newHref = loc.slice(0, newHrefEnds);
+//        setTimeout(function () {
+//            history.replaceState(null, null, newHref);
+//        }, 0);
+//
+//        /*for IE10-IE11*/
+//        var anchor = document.getElementById('article-anchor');
+//        var anchorTop = anchor.getBoundingClientRect().top;
+//        if(anchorTop > 20){
+//            window.scrollBy(0, anchorTop);
+//        }
+//    }
+//}
 
 
 /* ****animations**** */
