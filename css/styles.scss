@@ -309,12 +309,11 @@ body {
         border-right: 1px solid $color-2;
         border-bottom: none;
         background: url("../images/nav_bg.png") repeat-x;
-        color: #9e9b96;
 
         &:hover {
           box-shadow: inset 0 2px 0 $color-6;;
           background: url("../images/nav_bg.png");
-          color: $color-white;
+          opacity: 0.8;
         }
       }
     }
