@@ -160,15 +160,13 @@ document.querySelector('.mail-form').addEventListener('submit', function (event)
     console.log('sending form...');
 
     var elements = document.getElementsByClassName("form-val");
-    var formData = new FormData();
+    var formData = {};
     var xmlHttp = new XMLHttpRequest();
 
-    console.log(formData);
     console.log(elements);
 
     for(var i = 0; i < elements.length; i++){
-        console.log(elements[i].name, elements[i].value);
-        formData.set(elements[i].name, elements[i].value);
+        formData[elements[i].name] = elements[i].value;
     }
 
     console.log(formData);
