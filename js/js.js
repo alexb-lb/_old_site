@@ -156,26 +156,30 @@ function gallery() {
 
 /** Send email message when submit clicked **/
 document.querySelector('input[type="submit"]').addEventListener('submit', function (event){
-    console.log(1111);
-});
+    event.preventDefault();
+    console.log('sending form...');
 
-function submitEmail(){
-    var elements = document.getElementsByClassName("formVal");
+    var elements = document.getElementsByClassName("form-val");
     var formData = new FormData();
     var xmlHttp = new XMLHttpRequest();
 
-
-    for(var i=0; i<elements.length; i++){
+    for(var i=0; i < elements.length; i++){
         formData.append(elements[i].name, elements[i].value);
     }
+
     xmlHttp.onreadystatechange = function(){
         if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
             alert(xmlHttp.responseText);
         }
     };
 
-    xmlHttp.open("post", "server.php");
-    xmlHttp.send(formData);
+    xmlHttp.open("POST", "https://formspree.io/oknerbob@gmail.com");
+    xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlHttp.send(JSON.stringify(formData));
+});
+
+function submitEmail(){
+
 
     // example
     $.ajax({
