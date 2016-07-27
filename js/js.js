@@ -157,7 +157,6 @@ function gallery() {
 /** Send email message when submit clicked **/
 document.querySelector('.mail-form').addEventListener('submit', function (event){
     event.preventDefault();
-    event.preventBubble();
     console.log('sending form...');
 
     var elements = document.getElementsByClassName("form-val");
@@ -181,38 +180,3 @@ document.querySelector('.mail-form').addEventListener('submit', function (event)
     xmlHttp.send(JSON.stringify(formData));
     console.log(JSON.stringify(formData));
 });
-
-function submitEmail(){
-
-
-    // example
-    $.ajax({
-        url: "https://formspree.io/oknerbob@gmail.com",
-        method: "POST",
-        data: {message: "hello!"},
-        dataType: "json"
-    });
-
-    ///////
-    var xhr = new XMLHttpRequest();
-
-    xhr.open('POST', 'https://formspree.io/you@email.com', true);
-
-    xhr.send();
-
-    xhr.onreadystatechange = function() {
-        if (this.readyState != 4) return;
-
-        // по окончании запроса доступны:
-        // status, statusText
-        // responseText, responseXML (при content-type: text/xml)
-
-        if (this.status != 200) {
-            // обработать ошибку
-            alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
-            return;
-        }
-
-        // получить результат из this.responseText или this.responseXML
-    }
-};
