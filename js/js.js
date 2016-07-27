@@ -165,7 +165,8 @@ document.querySelector('.mail-form').addEventListener('submit', function (event)
 
     console.log(elements);
 
-    for(var i=0; i < elements.length; i++){
+    for(var i = 0; i < elements.length; i++){
+        console.log(elements[i].name, elements[i].value);
         formData.append(elements[i].name, elements[i].value);
     }
 
