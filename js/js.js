@@ -155,7 +155,7 @@ function gallery() {
 }
 
 /** Send email message when submit clicked **/
-document.querySelector('input[type="submit"]').addEventListener('click', function (event){
+document.querySelector('input[type="submit"]').addEventListener('submit', function (event){
     console.log(1111);
 });
 
