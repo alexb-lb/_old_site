@@ -163,11 +163,12 @@ document.querySelector('.mail-form').addEventListener('submit', function (event)
     var formData = new FormData();
     var xmlHttp = new XMLHttpRequest();
 
+    console.log(formData);
     console.log(elements);
 
     for(var i = 0; i < elements.length; i++){
         console.log(elements[i].name, elements[i].value);
-        formData.append(elements[i].name, elements[i].value);
+        formData.set(elements[i].name, elements[i].value);
     }
 
     console.log(formData);
