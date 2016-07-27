@@ -154,47 +154,57 @@ function gallery() {
     }
 }
 
+/** Send email message when submit clicked **/
+document.querySelector('input[type="submit"]').addEventListener('click', function (event){
+    console.log(1111);
+});
 
-/*change href, to delete anchor links*/
-//window.addEventListener('DOMContentLoaded', changeHref);
-//
-//function changeHref() {
-//    var loc = location.href;
-//
-//    if (loc.indexOf("#") !== -1) {
-//        var newHrefEnds;
-//
-//        /*дополнительный слеш перед хэшем пришлось добавить, что бы IE правильно отображал переходы*/
-//        if(loc.indexOf("/#") !== -1){
-//            newHrefEnds = loc.indexOf("/#");
-//        } else {
-//            newHrefEnds = loc.indexOf("#")
-//        }
-//
-//        var newHref = loc.slice(0, newHrefEnds);
-//        setTimeout(function () {
-//            history.replaceState(null, null, newHref);
-//        }, 0);
-//
-//        /*for IE10-IE11*/
-//        var anchor = document.getElementById('article-anchor');
-//        var anchorTop = anchor.getBoundingClientRect().top;
-//        if(anchorTop > 20){
-//            window.scrollBy(0, anchorTop);
-//        }
-//    }
-//}
+function submitEmail(){
+    var elements = document.getElementsByClassName("formVal");
+    var formData = new FormData();
+    var xmlHttp = new XMLHttpRequest();
 
 
-/* ****animations**** */
-/*сравнивая анимации, понял, что для отображения в главное меню - очень долго*/
-//menu.addEventListener('animationend', function (e) {
-//  setTimeout(shake(e), 150);
-//});
-//
-//function shake(e) {
-//  if (e.target !== menu.lastElementChild) {
-//    menu.classList.toggle('shakeRight');
-//  }
-//}
+    for(var i=0; i<elements.length; i++){
+        formData.append(elements[i].name, elements[i].value);
+    }
+    xmlHttp.onreadystatechange = function(){
+        if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+            alert(xmlHttp.responseText);
+        }
+    };
 
+    xmlHttp.open("post", "server.php");
+    xmlHttp.send(formData);
+
+    // example
+    $.ajax({
+        url: "https://formspree.io/oknerbob@gmail.com",
+        method: "POST",
+        data: {message: "hello!"},
+        dataType: "json"
+    });
+
+    ///////
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', 'https://formspree.io/you@email.com', true);
+
+    xhr.send();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState != 4) return;
+
+        // по окончании запроса доступны:
+        // status, statusText
+        // responseText, responseXML (при content-type: text/xml)
+
+        if (this.status != 200) {
+            // обработать ошибку
+            alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
+            return;
+        }
+
+        // получить результат из this.responseText или this.responseXML
+    }
+};
