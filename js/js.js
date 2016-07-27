@@ -157,6 +157,7 @@ function gallery() {
 /** Send email message when submit clicked **/
 document.querySelector('input[type="submit"]').addEventListener('submit', function (event){
     event.preventDefault();
+    event.preventBubble();
     console.log('sending form...');
 
     var elements = document.getElementsByClassName("form-val");
@@ -169,7 +170,7 @@ document.querySelector('input[type="submit"]').addEventListener('submit', functi
 
     xmlHttp.onreadystatechange = function(){
         if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-            alert(xmlHttp.responseText);
+            console.log(xmlHttp.responseText);
         }
     };
 
