@@ -157,19 +157,15 @@ function gallery() {
 /** Send email message when submit clicked **/
 document.querySelector('.mail-form').addEventListener('submit', function (event){
     event.preventDefault();
-    console.log('sending form...');
 
     var elements = document.getElementsByClassName("form-val");
     var formData = {};
     var xmlHttp = new XMLHttpRequest();
 
-    console.log(elements);
 
     for(var i = 0; i < elements.length; i++){
         formData[elements[i].name] = elements[i].value;
     }
-
-    console.log(formData);
 
     xmlHttp.onreadystatechange = function(){
         if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
@@ -180,5 +176,4 @@ document.querySelector('.mail-form').addEventListener('submit', function (event)
     xmlHttp.open("POST", "https://formspree.io/oknerbob@gmail.com");
     xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlHttp.send(JSON.stringify(formData));
-    console.log(JSON.stringify(formData));
 });
