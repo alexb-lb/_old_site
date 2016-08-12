@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d5fdafe-7987-4148-af2c-6f7c4f17eaad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/index.html" afterPath="$PROJECT_DIR$/blog/index.html" />
     </list>
     <ignored path="en1ight.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12">
-              <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="218">
+              <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -85,8 +86,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="378" />
-    <option name="width" value="992" />
+    <option name="x" value="322" />
+    <option name="width" value="1044" />
     <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -114,7 +115,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -125,7 +126,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,6 +185,7 @@
       <updated>1447012029557</updated>
       <workItem from="1470649717857" duration="706000" />
       <workItem from="1470651021741" duration="2055000" />
+      <workItem from="1470994016269" duration="84000" />
     </task>
     <task id="LOCAL-00029" summary="added styles in missed project 5 page">
       <created>1447178924115</created>
@@ -532,19 +534,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2761000" />
+    <option name="totallyTimeSpent" value="2845000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="378" y="0" width="992" height="738" extended-state="0" />
+    <frame x="322" y="0" width="1044" height="738" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18991417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19410568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33937398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33937398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -976,8 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+        <state relative-caret-position="218">
+          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
