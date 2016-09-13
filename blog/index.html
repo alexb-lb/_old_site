@@ -62,7 +62,7 @@
 <div id="msCommentsContainer"></div>
 <script src="https://widget.mediastealer.com/comments/commentsLauncher.js" async></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
     commentsLauncher({
       container: 'msCommentsContainer',
       width: 'auto',
@@ -71,7 +71,7 @@
       smiles: true,
       comments: true
     })
-  });
+  }, 5000);
 </script>
 
 <!--<iframe id="commentsMobileFrame"-->
