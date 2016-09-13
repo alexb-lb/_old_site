@@ -62,14 +62,16 @@
 <div id="msCommentsContainer"></div>
 <script src="https://widget.mediastealer.com/comments/commentsLauncher.js" async></script>
 <script>
-  commentsLauncher({
-    container: 'msCommentsContainer',
-    width: 'auto',
-    userId: 423,
-    lang: 'ua',
-    smiles: true,
-    comments: true
-  })
+  document.addEventListener("DOMContentLoaded", function () {
+    commentsLauncher({
+      container: 'msCommentsContainer',
+      width: 'auto',
+      userId: 423,
+      lang: 'ua',
+      smiles: true,
+      comments: true
+    })
+  });
 </script>
 
 <!--<iframe id="commentsMobileFrame"-->
