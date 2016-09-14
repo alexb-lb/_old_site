@@ -61,7 +61,11 @@
 </main>
 
 <!-- testing -->
-<div id="msCommentsContainer"></div><script src="https://widget.mediastealer.com/comments/commentsLauncher.js"></script><script>commentsLauncher({container: "msCommentsContainer",width: "700px",userId: 423,lang: "ru",smiles: false,comments: true})</script>
+<!--<div id="msCommentsContainer"></div><script src="https://widget.mediastealer.com/comments/commentsLauncher.js"></script><script>commentsLauncher({container: "msCommentsContainer",width: "700px",userId: 423,lang: "ru",smiles: false,comments: true})</script>-->
+<iframe id="commentsFrame" src="https://www.mediastealer.com/widgets/comments_https/index.html#lang=ru&smiles=true&comments=true&appId=434" style="width: 100%; border: 1px solid rgb(245, 245, 246); overflow: hidden;" scrolling="no"></iframe>
+<script src="https://www.mediastealer.com/assets/js/iframe-resize/iframeResizer.min.js"></script>
+<script>iFrameResize({log: false, autoResize: true, scrolling: false}, "#commentsFrame");</script>
+
 
 <footer class="main-footer">
   <a class="fa fa-vk" href="https://vk.com/en1ight"></a>
