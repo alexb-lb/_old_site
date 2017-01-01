@@ -203,14 +203,13 @@ let timeCalc = {
     this.hoursSecond = document.querySelector( '.time-calc__input-box.second .time-calc__hours' );
     this.minutesSecond = document.querySelector( '.time-calc__input-box.second .time-calc__minutes' );
 
-    this.calcButton.addEventListener( 'click', () => timeCalc.sum() );
+    this.calcButton.addEventListener( 'click', timeCalc.sum);
   },
 
   sum() {
     let minutesRest = 0;
     let hoursFromMinutes = 0;
 
-    console.log(this);
     // first input
     let hoursFirst = this.hoursFirst.value ? +this.hoursFirst.value : 0;
     let minutesFirst = this.minutesFirst.value ? +this.minutesFirst.value : 0;
