@@ -538,6 +538,22 @@ body {
     margin-left: 10px;
     margin-right: 10px; }
 
+.time-calc__history {
+  display: none;
+  flex-direction: column;
+  margin: 40px 0; }
+  .time-calc__history h3 {
+    border-bottom: 1px solid #d0d0d0; }
+  .time-calc__history .time-calc__history-item {
+    display: flex;
+    align-items: center; }
+    .time-calc__history .time-calc__history-item:nth-child(even) {
+      background-color: #f2f2f2; }
+    .time-calc__history .time-calc__history-item .time-calc__history-operation-num, .time-calc__history .time-calc__history-item .time-calc__history-operation-inf {
+      padding: 15px 5px; }
+    .time-calc__history .time-calc__history-item .time-calc__history-operation-num {
+      width: 30%; }
+
 /******** PORTFOLIO-GALLERY block **********/
 .gallery {
   display: -webkit-box;

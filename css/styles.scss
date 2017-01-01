@@ -113,11 +113,11 @@ body {
   }
 }
 
-.btn--disabled{
+.btn--disabled {
   opacity: 0.4;
   cursor: default;
 
-  &:hover{
+  &:hover {
     border: 3px solid $color-white;
     background-color: $color-4;
     color: $color-white;
@@ -658,6 +658,8 @@ $article-font-size-m: 45px;
   }
 }
 
+
+// calculator
 .time-calc {
   display: flex;
   flex-direction: column;
@@ -694,6 +696,34 @@ $article-font-size-m: 45px;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+}
+
+// calculator history styles
+.time-calc__history {
+  display: none;
+  flex-direction: column;
+  margin: 40px 0;
+
+  h3 {
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .time-calc__history-item {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .time-calc__history-operation-num, .time-calc__history-operation-inf {
+      padding: 15px 5px;
+    }
+
+    .time-calc__history-operation-num {
+      width: 30%;
+    }
   }
 }
 
@@ -965,7 +995,7 @@ $article-font-size-m: 45px;
 }
 
 /*кнопки*/
-.project-btn-container{
+.project-btn-container {
   width: 90%;
   display: flex;
   justify-content: space-around;
@@ -976,7 +1006,7 @@ $article-font-size-m: 45px;
   }
 }
 
-.project-btn--prev{
+.project-btn--prev {
   padding: 10px 10px 10px 0;
   margin: 0 5px;
   background-color: $color-4;
@@ -984,7 +1014,7 @@ $article-font-size-m: 45px;
   font-size: 14px;
   font-weight: normal;
 
-  .fa{
+  .fa {
     display: inline-block;
     padding: 0 10px;
     font-size: 16px;
@@ -997,7 +1027,7 @@ $article-font-size-m: 45px;
   }
 }
 
-.project-btn--next{
+.project-btn--next {
   @extend .project-btn--prev;
   padding: 10px 0 10px 10px;
 
@@ -1005,11 +1035,10 @@ $article-font-size-m: 45px;
     padding: 10px 10px 10px 20px;
   }
 
-  .fa{
+  .fa {
     text-align: end;
   }
 }
-
 
 /*инфоблок*/
 .project-info {

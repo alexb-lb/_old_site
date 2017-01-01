@@ -177,3 +177,93 @@ document.querySelector('.mail-form').addEventListener('submit', function (event)
     xmlHttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlHttp.send(JSON.stringify(formData));
 });
+
+/** Calculator on blog page **/
+let timeCalc = {
+    operationCounter: 0,
+    calcButton: '',
+    result: '',
+    hoursFirst: '',
+    minutesFirst: '',
+    hoursSecond: '',
+    minutesSecond: '',
+
+    init() {
+        this.calcButton = document.getElementById( 'time-calc-btn' );
+        this.result = document.getElementById( 'time-calc-result' );
+
+        // first input
+        this.hoursFirst = document.querySelector( '.time-calc__input-box.first .time-calc__hours' );
+        this.minutesFirst = document.querySelector( '.time-calc__input-box.first .time-calc__minutes' );
+
+        // second input
+        this.hoursSecond = document.querySelector( '.time-calc__input-box.second .time-calc__hours' );
+        this.minutesSecond = document.querySelector( '.time-calc__input-box.second .time-calc__minutes' );
+
+        this.calcButton.addEventListener( 'click', () => timeCalc.sum );
+    },
+
+    sum() {
+        let minutesRest = 0;
+        let hoursFromMinutes = 0;
+
+        // first input
+        let hoursFirst = this.hoursFirst.value ? +this.hoursFirst.value : 0;
+        let minutesFirst = this.minutesFirst.value ? +this.minutesFirst.value : 0;
+
+        // second input
+        let hoursSecond = this.hoursSecond.value ? +this.hoursSecond.value : 0;
+        let minutesSecond = this.minutesSecond.value ? +this.minutesSecond.value : 0;
+
+        // validate input
+        if ( hoursFirst === 0 && minutesFirst === 0 && hoursSecond === 0 && minutesSecond === 0 ) {
+            alert( 'введите время!' );
+            return;
+        }
+
+        // calc
+        let totalHours = hoursFirst + hoursSecond;
+        let totalMinutes = minutesFirst + minutesSecond;
+
+        minutesRest = (totalMinutes % 60);
+        hoursFromMinutes = (totalMinutes - minutesRest) / 60;
+        totalHours = totalHours + hoursFromMinutes;
+
+        // insert into html
+        this.insertResult( totalHours, minutesRest );
+
+        // insert operation into history
+        this.updateHistory( hoursFirst, minutesFirst, hoursSecond, minutesSecond )
+    },
+
+    /** Insert result into HTML **/
+    insertResult ( hours, minutes ) {
+        // insert result in first rows
+        this.hoursFirst.value = hours;
+        this.minutesFirst.value = minutes;
+
+        // insert result
+        this.result.innerHTML = `${hours} часов, ${minutes} минут`;
+    },
+
+    /** Insert history into HTML **/
+    updateHistory ( hoursFirst, minutesFirst, hoursSecond, minutesSecond  ) {
+        let historyRowElem =
+          `<div class="time-calc__history-item">`+
+          `<div class="time-calc__history-operation-num">№${++this.operationCounter}:</div>`+
+          `<div class="time-calc__history-operation-info">`+
+          `${hoursFirst} часов ${minutesFirst} минут + ${hoursSecond} часов ${minutesSecond} минут`+
+          `</div>`+
+          `</div>`;
+
+        // show history
+        document.querySelector('.time-calc__history ').style.display = 'flex';
+
+        // and insert row
+        document.querySelector('.time-calc__history-wrapper').innerHTML += historyRowElem;
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    timeCalc.init();
+})
