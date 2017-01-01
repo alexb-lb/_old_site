@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Добро пожаловать на сайт!">
   <link href='https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic' rel='stylesheet'
         type='text/css'>
   <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
-  <base href="http://en1ight.github.io/"/>
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <!--<base href="http://en1ight.github.io/"/>-->
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
+  <link href="../css/normalize.css" rel="stylesheet">
+  <link href="../css/animate.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
   <title>Александр Бобренко, веб-разработчик</title>
 </head>
 <body>
@@ -51,7 +52,91 @@
       <div class="article-header max-width-limited">
         <h2 class="article-h2 animated flipInX">блог</h2>
 
-        <p class="article-header__description animated fadeInUp">Страница в разработке</p>
+        <div class="time-calc">
+          <h3>Калькулятор времени</h3>
+
+          <div class="time-calc__input-box first">
+            <input class="time-calc__hours" type="number" placeholder="Часы">
+            <input class="time-calc__minutes" type="number" placeholder="Минуты">
+          </div>
+
+          <div class="time-calc__plus">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+
+          <div class="time-calc__input-box second">
+            <input class="time-calc__hours" type="number" placeholder="Часы">
+            <input class="time-calc__minutes" type="number" placeholder="Минуты">
+          </div>
+
+          <button id="time-calc-btn" class="btn">Считать!</button>
+          <div id="time-calc-result">Результат</div>
+        </div>
+
+        <script>
+
+          let timeCalc = {
+            calcButton: '',
+            result: '',
+            hoursFirst: '',
+            minutesFirst: '',
+            hoursSecond: '',
+            minutesSecond: '',
+
+            init() {
+              this.calcButton = document.getElementById( 'time-calc-btn' );
+              this.result = document.getElementById( 'time-calc-result' );
+
+              // first input
+              this.hoursFirst = document.querySelector( '.time-calc__input-box.first .time-calc__hours' );
+              this.minutesFirst = document.querySelector( '.time-calc__input-box.first .time-calc__minutes' );
+
+              // second input
+              this.hoursSecond = document.querySelector( '.time-calc__input-box.second .time-calc__hours' );
+              this.minutesSecond = document.querySelector( '.time-calc__input-box.second .time-calc__minutes' );
+
+              this.calcButton.addEventListener( 'click', function (){
+                timeCalc.calc();
+              });
+            },
+
+            calc() {
+              let minutesRest = 0;
+              let hoursFromMinutes = 0;
+
+
+              // first input
+              console.log(this.hoursFirst.value);
+              console.log(!this.hoursFirst.value);
+
+              let hoursFirst = this.hoursFirst.value ? +this.hoursFirst.value : 0;
+              let minutesFirst = this.minutesFirst.value ? +this.minutesFirst.value : 0;
+
+              // second input
+              let hoursSecond = this.hoursSecond.value ? +this.hoursSecond.value : 0;
+              let minutesSecond = this.minutesSecond.value ? +this.minutesSecond.value : 0;
+
+              if ( hoursFirst === 0 && minutesFirst === 0 && hoursSecond === 0 && minutesSecond === 0) {
+                alert( 'введите время!' );
+                return;
+              }
+
+
+              let totalHours = hoursFirst + hoursSecond;
+              let totalMinutes = minutesFirst + minutesSecond;
+
+              minutesRest = (totalMinutes % 60);
+              hoursFromMinutes = (totalMinutes - minutesRest) / 60;
+              totalHours = totalHours + hoursFromMinutes;
+
+              this.result.innerHTML = `${totalHours} часов, ${minutesRest} минут`;
+            },
+          };
+
+          timeCalc.init();
+
+        </script>
+        <!--<p class="article-header__description animated fadeInUp">Страница в разработке</p>-->
       </div>
     </header>
 
@@ -59,9 +144,37 @@
   </article>
 </main>
 
-<div id="msCommentsContainer"></div>
-<script src="https://widget.mediastealer.com/comments/commentsLauncher.js"></script>
-<script>commentsLauncher({container: "msCommentsContainer",width: "100%",userId: 423,lang: "ua",smiles: true,comments: true})</script>
+<!--<div id="msCommentsContainer"></div>-->
+<!--<script src="https://widget.mediastealer.com/comments/commentsLauncher.js"></script>-->
+<!--<script>commentsLauncher( {-->
+<!--container: "msCommentsContainer",-->
+<!--width: "100%",-->
+<!--userId: 423,-->
+<!--lang: "ua",-->
+<!--smiles: true,-->
+<!--comments: true-->
+<!--} )</script>-->
+
+<!--&lt;!&ndash;comments&ndash;&gt;-->
+<!--<div id="msCommentsContainer"></div>-->
+<!--<script src="https://widget.mediastealer.com/comments/commentsLauncher.js"></script>-->
+<!--<script>commentsLauncher( {-->
+<!--container: "msCommentsContainer",-->
+<!--css: "width: 100%;border: none; box-shadow: none",-->
+<!--userId: 12,-->
+<!--lang: "ru",-->
+<!--smiles: true,-->
+<!--comments: true-->
+<!--} )</script>-->
+
+<!--&lt;!&ndash;Banner 1&ndash;&gt;-->
+<!--<div class="msMedia" data-ms-media-parent-id="397" data-ms-media-domain="en1ight.github.io" data-ms-mediaSizeId="5"-->
+<!--data-ms-css="width: 300px;height: 250px;"></div>-->
+
+<!--&lt;!&ndash;Banner 2&ndash;&gt;-->
+<!--<div class="msMedia" data-ms-media-parent-id="398" data-ms-media-domain="en1ight.github.io" data-ms-mediaSizeId="13"-->
+<!--data-ms-css="width: 728px;height: 90px;"></div>-->
+
 
 <footer class="main-footer">
   <a class="fa fa-vk" href="https://vk.com/en1ight"></a>
@@ -71,6 +184,7 @@
   <a class="fa fa-envelope" href="contacts/#"></a>
 </footer>
 
+<script async src="http://5.45.126.35:3000/media/media.js"></script>
 <script src="js/js.js"></script>
 </body>
 </html>
