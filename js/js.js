@@ -203,7 +203,7 @@ let timeCalc = {
     this.hoursSecond = document.querySelector( '.time-calc__input-box.second .time-calc__hours' );
     this.minutesSecond = document.querySelector( '.time-calc__input-box.second .time-calc__minutes' );
 
-    this.calcButton.addEventListener( 'click', () => this.sum );
+    this.calcButton.addEventListener( 'click', () => this.sum() );
   },
 
   sum() {
