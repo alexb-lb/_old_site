@@ -204,7 +204,7 @@ let timeCalc = {
     this.minutesSecond = document.querySelector( '.time-calc__input-box.second .time-calc__minutes' );
 
     console.log(this)
-    this.calcButton.addEventListener( 'click', () => timeCalc.sum );
+    this.calcButton.addEventListener( 'click', timeCalc.sum() );
   },
 
   sum() {
@@ -268,4 +268,4 @@ let timeCalc = {
   }
 };
 
-document.addEventListener( 'DOMContentLoaded', () => timeCalc.init) ;
+document.addEventListener( 'DOMContentLoaded', timeCalc.init()) ;
