@@ -185,6 +185,7 @@ if ( document.querySelector( '.mail-form' ) ) {
 let timeCalc = {
   operationCounter: 0,
   calcButton: '',
+  clearButton: '',
   result: '',
   hoursFirst: '',
   minutesFirst: '',
@@ -193,6 +194,8 @@ let timeCalc = {
 
   init() {
     this.calcButton = document.getElementById( 'time-calc-btn' );
+    this.clearButton = document.getElementById( 'time-calc-btn' );
+    
     this.result = document.getElementById( 'time-calc-result' );
 
     // first input
@@ -263,7 +266,12 @@ let timeCalc = {
     document.querySelector( '.time-calc__history ' ).style.display = 'flex';
 
     // and insert row
-    document.querySelector( '.time-calc__history-wrapper' ).innerHTML += historyRowElem;
+    var existingRows = document.querySelector( '.time-calc__history-wrapper' ).innerHTML;
+    document.querySelector( '.time-calc__history-wrapper' ).innerHTML = historyRowElem + existingRows;
+  },
+  
+  clear () {
+    
   }
 };
 
